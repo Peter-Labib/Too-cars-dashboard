@@ -3,6 +3,10 @@ export const langs = {
     en: 'en',
     ar: 'ar',
   },
+  Id: {
+    en: 'Id',
+    ar: 'الهوية الشخصية',
+  },
   From: {
     en: 'from',
     ar: 'من',
@@ -451,11 +455,67 @@ export const langs = {
     en: 'Client cancel trip',
     ar: 'الراكب ألغي الرحلة',
   },
+  CaptinAcceptence: {
+    en: 'Captin Acceptance',
+    ar: 'موافقة السائق',
+  },
+  CaptinCancelTrip: {
+    en: 'Captin cancel trip',
+    ar: 'السائق ألغي الرحلة',
+  },
   CaptinArrived: {
     en: 'Captin arrived',
     ar: 'السائق وصل',
   },
-  TripNumb: {
+  TripBegin: {
+    en: 'Trip begin',
+    ar: 'بداية الرحلة',
+  },
+  Completed: {
+    en: 'completed',
+    ar: 'منتهية',
+  },
+  Paid: {
+    en: 'Paid',
+    ar: 'مدفوع',
+  },
+  NoCaptin: {
+    en: 'No captin',
+    ar: 'لا يوجد سائق',
+  },
+  Total: {
+    en: 'Total',
+    ar: 'الأجمالي',
+  },
+  ReasonOfCancelation: {
+    en: 'Reason of cancellation',
+    ar: 'سبب الألغاء',
+  },
+  AddressFrom: {
+    en: 'Address from',
+    ar: 'نقطة الألتقاء',
+  },
+  AddressTo: {
+    en: 'Address to',
+    ar: 'الواجهة',
+  },
+  Client: {
+    en: 'Client',
+    ar: 'العميل',
+  },
+  Captin: {
+    en: 'Captin',
+    ar: 'السائق',
+  },
+  Promo: {
+    en: 'Promo',
+    ar: 'الترويجي',
+  },
+  MaxDistance: {
+    en: 'Max distance',
+    ar: 'أقصى مسافة',
+  },
+  TripNumber: {
     en: 'Trip number',
     ar: 'رقم الرحلة',
   },
@@ -482,5 +542,19 @@ export const langs = {
   Chat: {
     en: 'Chat',
     ar: 'المحادثة',
+  },
+
+  // rejected trips
+  RejectedTrips: {
+    en: 'Rejected trips',
+    ar: 'الرحلات المرفوضة',
+  },
+  TripsLocations: {
+    en: 'Trips locations',
+    ar: 'أماكن الرحلات',
+  },
+  Hours: {
+    en: 'Hours',
+    ar: 'الساعات',
   },
 }

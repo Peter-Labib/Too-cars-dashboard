@@ -6,11 +6,11 @@ import plusGreen from '../../assets/icon/plus-green.svg'
 import location from '../../assets/icon/location-blue.svg'
 
 const CaptinRedirectButton = ({title, icon}) => (
-  <div className='transition-shadow rounded-lg  flex items-center gap-x-4 px-4 py-3 bg-sky-100/40 shadow-md shadow-sky-100/40 hover:shadow-none cursor-pointer'>
+  <div className='transition-shadow rounded-lg  flex items-center gap-x-4 px-4 py-3 bg-sky-100/40 shadow-md shadow-sky-100/20 hover:bg-sky-100/80 cursor-pointer'>
       <div>
           <img src={icon} alt='icon' />
       </div>
-      <p className='truncate'>{title}</p>
+      <p className=' whitespace-nowrap'>{title}</p>
   </div>
 )
 

@@ -8,8 +8,8 @@ const BankAccount = () => {
       <p className='title-added'>{strings.BankAccount}</p>
       <form className='shadowed-container-added p-4'>
         <div className='flex flex-col md:flex-row justify-evenly gap-x-8 '>
-          <Input label={strings.BankAccount} />
-          <Input label={strings.BankAccountNumber} />
+          <Input label={strings.BankAccount} blue />
+          <Input label={strings.BankAccountNumber} blue />
         </div>
         <div className='mx-auto max-w-min mt-3'>
           <Button type='submit'>{strings.Submit}</Button>

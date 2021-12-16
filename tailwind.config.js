@@ -7,12 +7,16 @@ module.exports = {
       serif: ['"Fjalla One"', 'sans-serif'],
     },
     extend: {
+      boxShadow:{
+        '3xl-extend':'0px 15px 50px rgba(160, 163, 189, 0.3)'
+      },
       colors: {
         main: '#0086E1',
         secondary: colors.sky,
       },
       textColor: {
         main: '#0086E1',
+        secondary:colors.sky
       },
       gridTemplateColumns: {
         'auto--extend': 'repeat(auto-fit, minmax(0, 1fr))',
@@ -28,7 +32,7 @@ module.exports = {
         },
       },
       animation: {
-        buzz: 'buzz 1s linear infinite',
+        buzz: 'buzz .1s linear 7',
       },
     },
   },

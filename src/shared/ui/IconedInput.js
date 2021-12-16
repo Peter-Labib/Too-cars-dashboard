@@ -21,15 +21,15 @@ const IconedInput = React.forwardRef(
           {label}
         </label>
         <div
-          className={`flex bg-secondary rounded-md overflow-hidden transition ${
+          className={`flex border border-transparent  bg-secondary rounded-md overflow-hidden transition ${
             error
-              ? 'ring-red-500 ring-1'
-              : 'focus-within:ring-blue-200 focus-within:ring-opacity-50 focus-within:ring-4'
+              ? ''
+              : 'focus-within:border-main'
           } `}
         >
           <div className='w-full'>
             <input
-              className='w-full bg-secondary outline-none p-2'
+              className='w-full bg-secondary-100/40 outline-none p-2'
               {...atr}
               id={id}
               ref={ref}
@@ -37,7 +37,7 @@ const IconedInput = React.forwardRef(
               name={name}
             />
           </div>
-          <div className='bg-secondary flex items-center px-2'>{children}</div>
+          <div className='bg-secondary-100/40 flex items-center px-2'>{children}</div>
         </div>
         <p className='error-text'>{error}</p>
       </div>

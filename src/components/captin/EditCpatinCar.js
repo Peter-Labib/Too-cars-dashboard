@@ -6,10 +6,11 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from '../../shared/ui/Dropdown'
-import ImgPicker from '../../shared/ui/ImgPicker/ImgPicker'
+import DropSelectW from '../../shared/ui/DropSelectW/DropSelectW'
+// import ImgPicker from '../../shared/ui/ImgPicker/ImgPicker'
 import IconedInput from '../../shared/ui/IconedInput'
 import Button from '../../shared/ui/Button'
-import ImgPickerD from '../../shared/ui/ImgPicker/ImgPickerD'
+import ImgPicker from '../../shared/ui/ImgPicker/ImgPicker'
 
 const schema = yup.object({
   carModel: yup.string().required('Required'),
@@ -30,14 +31,14 @@ const EditCpatinCar = () => {
     <div className='w-full '>
       <p className='title-added text-main'>{strings.CarEdit}</p>
       <form onSubmit={handleSubmit(onSubmit)} className='shadowed-container-added p-4 '>
-        <div className='grid grid-cols-2 '>
+        <div className='grid gap-4 grid-cols-2 '>
           <div className='h-20'>
-            <Dropdown name='Car-model' label={strings.CarModel} />
+            <DropSelectW blue name='Car-model' label={strings.CarModel} />
           </div>
-          <Dropdown name='Car-model' label={strings.CarColor} />
-          <Dropdown name='Car model' label={strings.ProductionDate} />
+          <DropSelectW blue name='Car-model' label={strings.CarColor} />
+          <DropSelectW blue name='Car model' label={strings.ProductionDate} />
           {/* <ImgPicker label={strings.CarImg} small /> */}
-          <ImgPickerD label={strings.CarImg} small />
+          <ImgPicker label={strings.CarImg} small />
           <IconedInput
             {...register('arabicCarNumber')}
             type='text'

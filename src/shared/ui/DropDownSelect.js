@@ -6,6 +6,7 @@ const customStyles = {
     ...provided,
     borderWidth: 0,
     boxShadow: '0px 14.3425px 47.8082px rgba(160, 163, 189, 0.3)',
+    width: '100%'
   }),
   indicatorSeparator: () => ({
     display: 'none',

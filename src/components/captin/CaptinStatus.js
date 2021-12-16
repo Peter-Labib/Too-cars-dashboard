@@ -7,7 +7,7 @@ import ToggleBtn from '../../shared/ui/ToggleBtn'
 import acceptanceIcon from '../../assets/icon/acceptance.svg'
 
 const InfoCard = ({ title, children }) => (
-  <div className='shadow-added rounded-lg flex flex-col p-2  '>
+  <div className='shadow-3xl-extend rounded-lg flex flex-col p-2  '>
     <p className='truncate text-sm pb-2 select-none'>{title}</p>
     {children}
   </div>

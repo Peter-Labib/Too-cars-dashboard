@@ -25,12 +25,12 @@ const Home = () => {
         <Section title={strings.DriversEgypt} titleCentered>
           <div className='grid grid-cols-2 gap-x-2 gap-y-4 pb-4 px-4'>
             <DetailCard
-              textColor='text-green--extended'
+              textColor='text-[#00BA3F]'
               count='45484'
               countsFor={strings.MobileAndAdminActive}
             />
             <DetailCard
-              textColor='text-red--extended'
+              textColor='text-[#FC3030]'
               count='45484'
               countsFor={strings.AdminInactive}
             />

@@ -1,41 +1,58 @@
 import React from 'react'
-import Table from '../../shared/ui/Table'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { strings } from '../../Localization/languages'
-import DropDownSelect from '../../shared/ui/DropDownSelect'
+// import DropDownSelect from '../../shared/ui/DropDownSelect'
+import Table from '../../shared/ui/Table'
+import Input from '../../shared/ui/Input'
+
+import DropSelectW from '../../shared/ui/DropSelectW/DropSelectW'
+import DetailCard from '../../shared/component/DetailCard'
+import SearchBtn from '../../shared/ui/SearchBtn'
 
 const TripsControl = () => {
   return (
-    <div>
+    <div className='max-w-[300px] md:max-w-none'>
       <p className='title-added'>{strings.TripsControl}</p>
+      <div className='grid md:grid-cols-5 lg:grid-cols-10 gap-2'>
+        <DetailCard count='500 ' countsFor={strings.CaptinWaiting} />
+        <DetailCard count='500 ' countsFor={strings.ClientCancelTrip} />
+        <DetailCard count='500 ' countsFor={strings.CaptinAcceptence} />
+        <DetailCard count='500 ' countsFor={strings.CaptinCancelTrip} />
+        <DetailCard count='500 ' countsFor={strings.CaptinArrived} />
+        <DetailCard count='500 ' countsFor={strings.TripBegin} />
+        <DetailCard count='500 ' countsFor={strings.Completed} />
+        <DetailCard count='500 ' countsFor={strings.Paid} />
+        <DetailCard count='500 ' countsFor={strings.NoCaptin} />
+        <DetailCard count='500 ' countsFor={strings.Total} />
+      </div>
       <form className='py-4 mb-8'>
-        <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4 mb-4'>
-          <DropDownSelect placeholder={strings.City} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.CarType} />
-          <DropDownSelect placeholder={strings.CarModel} />
-          <DropDownSelect placeholder={strings.Status} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.Agency} />
-          <DropDownSelect placeholder={strings.Agency} />
+        <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-2 mb-4'>
+          {/* <DropDownSelect placeholder={strings.City} /> */}
+
+          <DropSelectW placeholder={strings.City} />
+          <DropSelectW placeholder={strings.Agency} />
+          <DropSelectW placeholder={strings.CarType} />
+          <DropSelectW placeholder={strings.CarModel} />
+          <DropSelectW placeholder={strings.Status} />
+          <DropSelectW placeholder={strings.ReasonOfCancelation} />
+          <Input placeholder={strings.AddressFrom} type='text' />
+          <Input placeholder={strings.AddressTo} type='text' />
+          <DropSelectW placeholder={strings.Client} />
+          <DropSelectW placeholder={strings.Captin} />
+          <DropSelectW placeholder={strings.Promo} />
+          <Input placeholder={strings.MaxDistance} />
         </div>
-        <div className='flex gap-x-3 items-center'>
-          <button className='transition-colors bg-green-500 hover:bg-green-700 shadow-green-500/50 shadow-sm px-3 py-1 text-white rounded-md'>
-            <FontAwesomeIcon icon={faSearch} />
-          </button>
-          <button className='transition-colors bg-red-500 hover:bg-red-700 px-3.5 shadow-sm shadow-red-500/50 py-1 text-white rounded-md'>
+        <div className='flex gap-x-4 items-center'>
+          <SearchBtn />
+          <button className='transition-colors bg-red-500 hover:bg-red-700 px-3.5 py-2 shadow-sm shadow-red-500/50  text-white rounded-md'>
             <FontAwesomeIcon icon={faTimes} />
           </button>
         </div>
       </form>
       <Table
         head={[
-          strings.TripNumb,
+          strings.TripNumber,
           strings.City,
           strings.ClientName,
           strings.Status,
@@ -47,7 +64,7 @@ const TripsControl = () => {
         ]}
         body={[
           {
-            tripNumb: '1598431458',
+            tripNumber: '1598431458',
             city: 'New York',
             client: 'ahmed',
             status: 'waiting',

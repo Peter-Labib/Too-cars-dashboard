@@ -5,7 +5,7 @@ import chatIcon from '../../assets/icon/chat.svg'
 
 const Table = ({ body = [], head = [], chat, edit }) => {
   return (
-    <table className='table-auto'>
+    <table className='table-auto overflow-x-auto block md:inline-table lg:w-full'>
       <thead className='bg-main/5'>
         <tr className=' bg-secondary border-b border-gray-300'>
           {head.map((item) => (

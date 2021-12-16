@@ -2,12 +2,14 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import {strings} from '../../Localization/languages'
+import { strings } from '../../Localization/languages'
 import Input from '../../shared/ui/Input'
 import Button from '../../shared/ui/Button'
 import Dropdown from '../../shared/ui/Dropdown'
+import DropSelectW from '../../shared/ui/DropSelectW/DropSelectW'
 import Radio from '../../shared/ui/Radio'
 import avatar from '../../assets/img/avatar.png'
+import DateSelect from '../../shared/ui/DateSelect'
 
 const schema = yup.object({
   name: yup.string().required('Required'),
@@ -30,7 +32,7 @@ const EditCaptinMainData = () => {
   const {
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors,isDirty },
   } = useForm({
     resolver: yupResolver(schema),
   })
@@ -53,6 +55,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.name?.message}
                   name='name'
                   id='edit-captin-name'
@@ -70,6 +73,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.city?.message}
                   name='city'
                   id='edit-captin-city'
@@ -87,6 +91,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.address?.message}
                   name='address'
                   id='edit-captin-address'
@@ -104,6 +109,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.mobile?.message}
                   name='mobile'
                   id='edit-captin-mobile'
@@ -120,6 +126,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.email?.message}
                   name='email'
                   id='edit-captin-email'
@@ -136,6 +143,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.password?.message}
                   name='password'
                   id='edit-captin-password'
@@ -151,12 +159,13 @@ const EditCaptinMainData = () => {
               name='birth'
               control={control}
               render={({ field }) => (
-                <Input
+                <DateSelect
+                  blue
                   error={errors.birth?.message}
                   name='birth'
                   id='edit-captin-birth'
                   label={strings.BirthDate}
-                  type='text'
+                  // type='text'
                   {...field}
                 />
               )}
@@ -168,6 +177,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.nationality?.message}
                   name='nationality'
                   id='edit-captin-nationality'
@@ -183,13 +193,27 @@ const EditCaptinMainData = () => {
               name='agency'
               control={control}
               render={({ field }) => (
-                <Dropdown
+                // <Dropdown
+                //   error={errors.agency?.message}
+                //   name='agency'
+                //   id='edit-captin-agency'
+                //   label={strings.Agency}
+                //   options={[1, 2, 3, 4]}
+                //   {...field}
+                // />
+                <DropSelectW
                   error={errors.agency?.message}
                   name='agency'
                   id='edit-captin-agency'
                   label={strings.Agency}
-                  options={[1, 2, 3, 4]}
+                  options={[
+                    { value: 'a', label: 'a' },
+                    { value: 'b', label: 'b' },
+                    { value: 'c', label: 'c' },
+                    { value: 'd', label: 'd' },
+                  ]}
                   {...field}
+                  blue
                 />
               )}
             />
@@ -199,12 +223,18 @@ const EditCaptinMainData = () => {
               name='commission'
               control={control}
               render={({ field }) => (
-                <Dropdown
+                <DropSelectW
+                  blue
                   error={errors.commission?.message}
                   name='commission'
                   id='edit-captin-commission'
                   label={strings.Commission}
-                  options={[1, 2, 3, 4]}
+                  options={[
+                    { value: 'a', label: 'a' },
+                    { value: 'b', label: 'b' },
+                    { value: 'c', label: 'c' },
+                    { value: 'd', label: 'd' },
+                  ]}
                   {...field}
                 />
               )}
@@ -216,6 +246,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.refferalCodeDriver?.message}
                   name='refferalCodeDriver'
                   id='edit-captin-refferal-code-driver'
@@ -232,6 +263,7 @@ const EditCaptinMainData = () => {
               control={control}
               render={({ field }) => (
                 <Input
+                  blue
                   error={errors.refferalCodePassenger?.message}
                   name='refferal-code-passenger'
                   id='edit-captin-refferal-code-passenger'
@@ -247,12 +279,18 @@ const EditCaptinMainData = () => {
               name='bonus'
               control={control}
               render={({ field }) => (
-                <Dropdown
+                <DropSelectW
+                  blue
                   error={errors.bonus?.message}
                   name='bonus'
                   id='edit-captin-bonus'
                   label={strings.Bonus}
-                  options={[1, 2, 3, 4]}
+                  options={[
+                    { value: 'a', label: 'a' },
+                    { value: 'b', label: 'b' },
+                    { value: 'c', label: 'c' },
+                    { value: 'd', label: 'd' },
+                  ]}
                   {...field}
                 />
               )}
@@ -263,12 +301,18 @@ const EditCaptinMainData = () => {
               name='guarantee'
               control={control}
               render={({ field }) => (
-                <Dropdown
+                <DropSelectW
+                  blue
                   error={errors.guarantee?.message}
                   name='guarantee'
                   id='edit-captin-guarantee'
                   label={strings.Guarantee}
-                  options={[1, 2, 3, 4]}
+                  options={[
+                    { value: 'a', label: 'a' },
+                    { value: 'b', label: 'b' },
+                    { value: 'c', label: 'c' },
+                    { value: 'd', label: 'd' },
+                  ]}
                   {...field}
                 />
               )}
@@ -284,7 +328,7 @@ const EditCaptinMainData = () => {
           </div>
         </div>
         <div className='mx-auto max-w-min w-3/12 mt-4'>
-          <Button type='submit'>{strings.Submit}</Button>
+          <Button type='submit' errors={errors} >{strings.Submit}</Button>
         </div>
       </form>
     </div>

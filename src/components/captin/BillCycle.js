@@ -90,72 +90,58 @@ const BillCycle = () => {
       </Listbox>
       <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-6 p-6 shadowed-container-added '>
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.PaidTrips}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.OnlineHours}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.CompletedTripsRate}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.CaptinRate}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.PaidTripsPrice}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.CaptinCommisionOfPaidTrips}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.PromoCost}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.GuaranteePeriodsCount}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.AddBalanceTotal}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.DiscountBalanceTotal}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.DriverBalanceBeforeBillCycleEnd}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.AgencyCommission}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.Amount}
         />
         <CardDetail
-          textColor='text-sky-700'
           count='1500'
           countsFor={strings.Status}
         />

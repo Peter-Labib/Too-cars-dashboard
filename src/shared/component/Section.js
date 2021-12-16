@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section = ({ title, children, titleCentered }) => {
   return (
-    <div className={` w-full shadow-added rounded-lg overflow-hidden`}>
+    <div className={` w-full shadow-3xl-extend rounded-lg overflow-hidden`}>
       <h3
         className={`${
           titleCentered && 'text-center'

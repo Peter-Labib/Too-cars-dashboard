@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  button {
+    @apply flex items-center justify-center
+  }
+
+  td {
+    @apply text-center
+  }
+}
+
 @layer components {
 /* 
 .captin-main-data-col-added {
@@ -14,7 +24,7 @@
   }
 */
   .captin-main-data-col-added {
-    @apply col-span-4 md:col-span-2 lg:col-span-1 overflow-hidden;
+    @apply col-span-4 md:col-span-2 lg:col-span-1 ;
   }
 
   .nav-item--apply {
@@ -22,9 +32,6 @@
   }
   .error-text {
     @apply text-red-600 text-xs;
-  }
-  .input-container-main-data-added {
-    @apply h-full w-full p-1 flex flex-col gap-1 overflow-hidden;
   }
 
   .shadowed-container-added {

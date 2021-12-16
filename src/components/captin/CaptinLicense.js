@@ -32,7 +32,7 @@ const CaptinLicense = () => {
         onSubmit={handleSubmit(onSubmit)}
         className='shadowed-container-added p-4'
       >
-        <div className='grid grid-cols-2 gap-x-4 '>
+        <div className='grid grid-cols-2 gap-4 '>
           <Controller
             name='drivingLicenseFront'
             control={control}
@@ -46,18 +46,16 @@ const CaptinLicense = () => {
             )}
           />
 
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
-          <ImagePicker label='choose pic' />
+          <ImagePicker label={strings.DrivingLicenseBack} />
+          <ImagePicker label={strings.DriverPhoto} />
+          <ImagePicker label={strings.CarImageWithPlateNumber} />
+          <ImagePicker label={strings.CarLicensePhotoFront} />
+          <ImagePicker label={strings.CarLicensePhotoBack} />
+          <ImagePicker label={strings.DrivingLicenseNumber} />
+          <ImagePicker label={strings.CarLicenseNumber} />
+          <ImagePicker label={strings.NationalIdNumber} />
+          <ImagePicker label={strings.NationalIdPhotoFront} />
+          <ImagePicker label={strings.NationalIdPhotoBack} />
         </div>
         <div className='mx-auto max-w-min mt-4'>
           <Button type='submit'>submit</Button>
