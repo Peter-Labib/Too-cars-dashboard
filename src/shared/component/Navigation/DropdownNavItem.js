@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-import {v4 as uuidv4} from 'uuid'
-import { Link } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
-import links from '../../../routes/links'
-import SidebarItem from './SidebarItem'
-import homeIcon from '../../../assets/icon/home.svg'
+import NavItem from './NavItem'
 
-const Dropdown = ({ linkData }) => {
+const DropdownNavItem = ({ linkData }) => {
   const { name, icon, children } = linkData
   const [open, setOpen] = useState(false)
 
@@ -18,7 +15,7 @@ const Dropdown = ({ linkData }) => {
   return (
     <div>
       <div
-        className=' px-4 py-3 group nav-item--apply group hover:bg-main w-full'
+        className=' px-4 py-3 group flex items-center transition cursor-pointer group hover:bg-main w-full'
         onClick={dropDownToogle}
       >
         <div>
@@ -47,41 +44,20 @@ const Dropdown = ({ linkData }) => {
         } overflow-hidden`}
       >
         {children.map((child) => (
-          <div
-            key={uuidv4()}
-            className='flex items-center px-12 py-2 hover:bg-main hover:text-white hover:shadow-inner cursor-pointer'
-          >
-            <div>
-              <FontAwesomeIcon icon={child.icon} />
-            </div>
-            <div className='px-4'>{child.name}</div>
-          </div>
+          // <div
+          //   key={uuidv4()}
+          //   className='flex items-center px-12 py-2 hover:bg-main hover:text-white hover:shadow-inner cursor-pointer'
+          // >
+          //   <div>
+          //     <FontAwesomeIcon icon={child.icon} />
+          //   </div>
+          //   <div className='px-4'>{child.name}</div>
+          // </div>
+          <NavItem key={uuidv4()} linkData={child} subMenu />
         ))}
       </div>
     </div>
   )
 }
 
-const Sidebar = React.memo(() => {
-  return (
-    <div className='flex-grow text-main'>
-      <Link to='' className='flex bg-gray-100  text-black px-4 py-2 items-center'>
-        <div>
-          <img src={homeIcon} alt='home' />
-        </div>
-        <div className='px-2'>Home</div>
-      </Link>
-      <div className='py-3'>
-        {links.map((link, i) =>
-          link.children.length > 0 ? (
-            <Dropdown key={link.name} linkData={link} />
-          ) : (
-            <SidebarItem key={link.name} linkData={link} />
-          )
-        )}
-      </div>
-    </div>
-  )
-})
-
-export default Sidebar
+export default DropdownNavItem
