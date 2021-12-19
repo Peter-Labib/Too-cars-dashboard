@@ -1,7 +1,7 @@
 import React from 'react'
 import {strings} from '../../Localization/languages'
-import Input from '../../shared/ui/Input'
-import Button from '../../shared/ui/Button'
+import Input from '../../shared/formElements/Input'
+import Button from '../../shared/formElements/Button'
 const BankAccount = () => {
   return (
     <div className='w-full'>

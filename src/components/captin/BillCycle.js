@@ -4,7 +4,7 @@ import { Listbox, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { strings } from '../../Localization/languages'
-import CardDetail from '../../shared/component/DetailCard'
+import CardDetail from '../../shared/components/DetailCard'
 
 const cycles = [
   { from: '20/10/2000', to: '26/9/2020' },
@@ -48,7 +48,7 @@ const BillCycle = () => {
                   className={({ active }) =>
                     `${
                       active ? 'bg-main text-white' : 'bg-white text-black'
-                    } cursor-default select-none relative transition my-2 rounded-sm shadow-md overflow-hidden `
+                    } relative transition my-2 rounded-sm shadow-md overflow-hidden `
                   }
                   value={cycle}
                 >

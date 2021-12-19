@@ -5,12 +5,12 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar } from '@fortawesome/free-solid-svg-icons'
-import Dropdown from '../../shared/ui/Dropdown'
-import DropSelectW from '../../shared/ui/DropSelectW/DropSelectW'
+import Dropdown from '../../shared/formElements/Dropdown'
+import DropSelectW from '../../shared/formElements/DropSelectW/DropSelectW'
 // import ImgPicker from '../../shared/ui/ImgPicker/ImgPicker'
-import IconedInput from '../../shared/ui/IconedInput'
-import Button from '../../shared/ui/Button'
-import ImgPicker from '../../shared/ui/ImgPicker/ImgPicker'
+import IconedInput from '../../shared/formElements/IconedInput'
+import Button from '../../shared/formElements/Button'
+import ImgPicker from '../../shared/formElements/ImgPicker/ImgPicker'
 
 const schema = yup.object({
   carModel: yup.string().required('Required'),

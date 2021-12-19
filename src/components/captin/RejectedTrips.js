@@ -1,6 +1,6 @@
 import React from 'react'
 import { strings } from '../../Localization/languages'
-import Table from '../../shared/ui/Table'
+import Table from '../../shared/components/Table'
 
 const RejectedTrips = () => {
   return (

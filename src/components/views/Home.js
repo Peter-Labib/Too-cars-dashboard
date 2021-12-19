@@ -2,8 +2,8 @@ import React from 'react'
 import { strings } from '../../Localization/languages'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faWifi, faCar } from '@fortawesome/free-solid-svg-icons'
-import Section from '../../shared/component/Section'
-import DetailCard from '../../shared/component/DetailCard'
+import Section from '../../shared/components/Section'
+import DetailCard from '../../shared/components/DetailCard'
 import icon from '../../assets/icon/users.svg'
 
 const OsUsersCount = ({ color, os, count }) => (

@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Header from '../shared/component/Header'
-import NavLinks from '../shared/component/Navigation/NavLinks'
-import Sidebar from '../shared/component/Navigation/Sidebar'
-import SideDrawer from '../shared/component/Navigation/SideDrawer'
-import Backdrop from '../shared/ui/Backdrop'
-import EditCaptin from './views/EditCaptin'
+import Header from '../shared/components/Header'
+import NavLinks from '../shared/components/Navigation/NavLinks'
+import Sidebar from '../shared/components/Navigation/Sidebar'
+import SideDrawer from '../shared/components/Navigation/SideDrawer'
+import Backdrop from '../shared/formElements/Backdrop'
 import Home from './views/Home'
-import TripsControl from './views/TripsControl'
-import TripsLocations from './views/TripsLocations'
+import EditCaptin from './captin/views/EditCaptin'
+import CaptinControl from './captin/views/CaptinControl'
+import TripsControl from './trips/views/TripsControl'
+import TripsLocations from './trips/views/TripsLocations'
 
-import useMediaQuery from '../shared/hooks/useMediaQuery'
+import useMediaQuery from '../utils/hooks/useMediaQuery'
 
 const AppContainer = () => {
   const [openSidebar, setopenSidebar] = useState(false)
@@ -53,6 +54,9 @@ const AppContainer = () => {
             <Switch>
               <Route path='/captin'>
                 <EditCaptin />
+              </Route>
+              <Route path='/captin-control'>
+                <CaptinControl />
               </Route>
               <Route path='/trips-locations'>
                 <TripsLocations />

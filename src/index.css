@@ -5,16 +5,28 @@
 
 @layer base {
   button {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center;
+  }
+
+  thead {
+    @apply bg-main/5 border-b border-gray-300;
+  }
+
+  th {
+    @apply p-4;
+  }
+
+  tr {
+    @apply border-b border-gray-300;
   }
 
   td {
-    @apply text-center
+    @apply text-center p-0.5;
   }
 }
 
 @layer components {
-/* 
+  /* 
 .captin-main-data-col-added {
     @apply col-span-4 md:col-span-2 lg:col-span-1 overflow-hidden;
   }
@@ -24,7 +36,7 @@
   }
 */
   .captin-main-data-col-added {
-    @apply col-span-4 md:col-span-2 lg:col-span-1 ;
+    @apply col-span-4 md:col-span-2 lg:col-span-1;
   }
 
   .error-text {
@@ -41,19 +53,19 @@
 
   /* react transition group */
   .slide-in-enter {
-    @apply -translate-x-full
+    @apply -translate-x-full;
   }
 
   .slide-in-enter-active {
-    @apply translate-x-0 transition-transform  duration-1000
+    @apply translate-x-0 transition-transform  duration-1000;
   }
 
   .slide-in-exit {
-    @apply translate-x-0
+    @apply translate-x-0;
   }
 
   .slide-in-exit-active {
-    @apply -translate-x-full transition-transform duration-1000
+    @apply -translate-x-full transition-transform duration-1000;
   }
 }
 
@@ -71,4 +83,5 @@
 
 body {
   font-family: 'Tajawal', sans-serif;
+  cursor: default;
 }

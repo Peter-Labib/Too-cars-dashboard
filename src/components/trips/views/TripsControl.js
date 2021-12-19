@@ -1,14 +1,12 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { strings } from '../../Localization/languages'
+import { strings } from '../../../Localization/languages'
 // import DropDownSelect from '../../shared/ui/DropDownSelect'
-import Table from '../../shared/ui/Table'
-import Input from '../../shared/ui/Input'
-
-import DropSelectW from '../../shared/ui/DropSelectW/DropSelectW'
-import DetailCard from '../../shared/component/DetailCard'
-import SearchBtn from '../../shared/ui/SearchBtn'
+import Table from '../../../shared/components/Table'
+import Input from '../../../shared/formElements/Input'
+import DropSelectW from '../../../shared/formElements/DropSelectW/DropSelectW'
+import DetailCard from '../../../shared/components/DetailCard'
+import SearchBtn from '../../../shared/formElements/SearchBtn'
+import ResetBtn from '../../../shared/formElements/ResetBtn'
 
 const TripsControl = () => {
   return (
@@ -44,10 +42,8 @@ const TripsControl = () => {
           <Input placeholder={strings.MaxDistance} />
         </div>
         <div className='flex gap-x-4 items-center'>
-          <SearchBtn />
-          <button className='transition-colors bg-red-500 hover:bg-red-700 px-3.5 py-2 shadow-sm shadow-red-500/50  text-white rounded-md'>
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
+          <SearchBtn type='submit' />
+          <ResetBtn />
         </div>
       </form>
       <Table

@@ -2,8 +2,8 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import ImagePicker from '../../shared/ui/ImgPicker/ImgPicker'
-import Button from '../../shared/ui/Button'
+import ImagePicker from '../../shared/formElements/ImgPicker/ImgPicker'
+import Button from '../../shared/formElements/Button'
 
 import { strings } from '../../Localization/languages'
 // import { validateImage } from '../../utils/functions'
@@ -27,7 +27,7 @@ const CaptinLicense = () => {
 
   return (
     <div className='w-full'>
-      <p className='title-added'>{strings.CaptinLicense}</p>
+      <p className='title-added'>{strings.CaptinLicenseImg}</p>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className='shadowed-container-added p-4'

@@ -3,8 +3,8 @@ import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { strings } from '../../Localization/languages'
-import Input from '../../shared/ui/Input'
-import Button from '../../shared/ui/Button'
+import Input from '../../shared/formElements/Input'
+import Button from '../../shared/formElements/Button'
 import logo from '../../assets/img/Untitled-2.png'
 
 const schema = yup.object({

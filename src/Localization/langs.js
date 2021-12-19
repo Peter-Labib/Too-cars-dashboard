@@ -229,7 +229,7 @@ export const langs = {
     ar: 'رقم الحساب',
   },
   // captin license
-  CaptinLicense: {
+  CaptinLicenseImg: {
     en: 'Captin license',
     ar: 'صور بيانات الكابتن',
   },
@@ -557,4 +557,42 @@ export const langs = {
     en: 'Hours',
     ar: 'الساعات',
   },
+
+  // captin control
+  CaptinControl: {
+    en: 'Captin control',
+    ar: 'التحكم في الكابتن',
+  },
+  CaptinStatus: {
+    en: 'Captin status',
+    ar: 'حالة السائق',
+  },
+  CaptinLicense: {
+    en: 'Captin license',
+    ar: 'رخصة القيادة',
+  },
+  CarLicense: {
+    en: 'Car license',
+    ar: 'رخصة السيارة',
+  },
+  MinTrips: {
+    en: 'Minimum trips',
+    ar: 'العدد الأدني للرحلات',
+  },
+  MaxTrips: {
+    en: 'Maxmum trips',
+    ar: 'العدد الأقصي للرحلات',
+  },
+  Cash: {
+    en: 'Cash',
+    ar: 'السعر المقبوض',
+  },
+  RegisteredBy: {
+    en: 'Registered by',
+    ar: 'تم التسجل من خلال',
+  },
+  Control: {
+    en: 'Control',
+    ar:'التحكم'
+  }
 }

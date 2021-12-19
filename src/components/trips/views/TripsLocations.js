@@ -1,8 +1,8 @@
 import React from 'react'
-import { strings } from '../../Localization/languages'
-import DateSelect from '../../shared/ui/DateSelect'
-import DropSelectW from '../../shared/ui/DropSelectW/DropSelectW'
-import SearchBtn from '../../shared/ui/SearchBtn'
+import { strings } from '../../../Localization/languages'
+import DateSelect from '../../../shared/formElements/DateSelect'
+import DropSelectW from '../../../shared/formElements/DropSelectW/DropSelectW'
+import SearchBtn from '../../../shared/formElements/SearchBtn'
 // import Input from '../../shared/ui/Input'
 
 const TripsLocations = () => {
@@ -21,8 +21,8 @@ const TripsLocations = () => {
           <SearchBtn />
         </div>
       </form>
-      <div className='mt-16'>
-        <table className='table-auto overflow-x-auto shadow-3xl-extend rounded-md divide-y lg:w-fit'>
+      <div className='mt-16 overflow-x-auto mx-auto shadow-3xl-extend lg:overflow-x-hidden my-16 max-w-[93vw]'>
+        <table className='table-auto  rounded-md divide-y lg:w-fit'>
           <tr>
             <th className='py-2.5 px-4'>{strings.Hours}</th>
             <td className='md:inline-block border border-gray-200 px-3.5 py-2.5 rounded-md mx-0.5 w-12'>00</td>

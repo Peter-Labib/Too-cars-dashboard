@@ -2,13 +2,13 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import {strings} from '../../Localization/languages'
-import Section from '../../shared/component/Section'
-import ToggleBtn from '../../shared/ui/ToggleBtn'
+import Section from '../../shared/components/Section'
+import ToggleBtn from '../../shared/formElements/ToggleBtn'
 import acceptanceIcon from '../../assets/icon/acceptance.svg'
 
 const InfoCard = ({ title, children }) => (
   <div className='shadow-3xl-extend rounded-lg flex flex-col p-2  '>
-    <p className='truncate text-sm pb-2 select-none'>{title}</p>
+    <p className='truncate text-sm pb-2'>{title}</p>
     {children}
   </div>
 )
@@ -18,7 +18,7 @@ const CaptinStatus = ({ state, rate = 0, acceptance = 0 }) => {
   return (
     <div className='grid grid-cols-2 md:grid-cols-3  gap-4 shadowed-container-added w-full p-4'>
       <InfoCard title={strings.UserStatus}>
-        <ToggleBtn />
+      <p className='text-main font-semibold truncate'>Suspend</p>
       </InfoCard>
       <InfoCard title={strings.Rating}>
         {

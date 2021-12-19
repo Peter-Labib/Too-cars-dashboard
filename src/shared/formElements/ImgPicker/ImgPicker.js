@@ -93,7 +93,7 @@ const ImgPicker = React.forwardRef(
               </React.Fragment>
             ) : (
               <React.Fragment>
-                <p className='text-gray-400 text-center select-none'>
+                <p className='text-gray-400 text-center'>
                   Choose file
                 </p>
               </React.Fragment>
