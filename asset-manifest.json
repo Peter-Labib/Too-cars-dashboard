@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/too-cars-dashboard/static/css/main.b9cc0606.css",
+    "main.js": "/too-cars-dashboard/static/js/main.b4f69423.js",
+    "static/js/787.338dca04.chunk.js": "/too-cars-dashboard/static/js/787.338dca04.chunk.js",
+    "static/media/icon.png": "/too-cars-dashboard/static/media/icon.93979588fef8f0e2fbcf.png",
+    "static/media/Untitled-2.png": "/too-cars-dashboard/static/media/Untitled-2.5fbf6796790c032146e2.png",
+    "static/media/avatar.png": "/too-cars-dashboard/static/media/avatar.e5117e8e0cea57c9a92f.png",
+    "static/media/too-logo-1.png": "/too-cars-dashboard/static/media/too-logo-1.3dac1c6c06bd3f0ff784.png",
+    "static/media/distance.svg": "/too-cars-dashboard/static/media/distance.2236e6770e4306faea7bec0bc1133ea5.svg",
+    "static/media/acceptance.svg": "/too-cars-dashboard/static/media/acceptance.616a9dd86cd3c043ee88161a6ee74451.svg",
+    "static/media/calender.svg": "/too-cars-dashboard/static/media/calender.0186288b05fbace87e2164d8ea7aae7a.svg",
+    "static/media/chat.svg": "/too-cars-dashboard/static/media/chat.513bcb8a7c86570f98b5b4385527e3b2.svg",
+    "static/media/location-blue.svg": "/too-cars-dashboard/static/media/location-blue.c3284171bd94ef67b8a8e1170f5ce588.svg",
+    "static/media/close-red.svg": "/too-cars-dashboard/static/media/close-red.c2673fabc7e2f26f199a67cc7ac78cef.svg",
+    "static/media/users.svg": "/too-cars-dashboard/static/media/users.2570af56a42b84fb0d831e1b8b90c4f5.svg",
+    "static/media/edit.svg": "/too-cars-dashboard/static/media/edit.ce4173616b4770dc09c1f4a52c7f0753.svg",
+    "index.html": "/too-cars-dashboard/index.html",
+    "static/media/home.svg": "/too-cars-dashboard/static/media/home.fbc774a65400a0095a19e7a32bc97c48.svg",
+    "static/media/plus-blue.svg": "/too-cars-dashboard/static/media/plus-blue.943355e12579d900f0965cac8c0799b1.svg",
+    "static/media/plus-green.svg": "/too-cars-dashboard/static/media/plus-green.f1b29a221a9f13df8e04083a71907e6b.svg",
+    "main.b9cc0606.css.map": "/too-cars-dashboard/static/css/main.b9cc0606.css.map",
+    "main.b4f69423.js.map": "/too-cars-dashboard/static/js/main.b4f69423.js.map",
+    "787.338dca04.chunk.js.map": "/too-cars-dashboard/static/js/787.338dca04.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9cc0606.css",
+    "static/js/main.b4f69423.js"
+  ]
+}
