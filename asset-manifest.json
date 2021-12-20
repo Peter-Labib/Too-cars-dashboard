@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/too-cars-dashboard/static/css/main.b9cc0606.css",
-    "main.js": "/too-cars-dashboard/static/js/main.b4f69423.js",
+    "main.css": "/too-cars-dashboard/static/css/main.4592ed45.css",
+    "main.js": "/too-cars-dashboard/static/js/main.3894821b.js",
     "static/js/787.338dca04.chunk.js": "/too-cars-dashboard/static/js/787.338dca04.chunk.js",
     "static/media/icon.png": "/too-cars-dashboard/static/media/icon.93979588fef8f0e2fbcf.png",
     "static/media/Untitled-2.png": "/too-cars-dashboard/static/media/Untitled-2.5fbf6796790c032146e2.png",
@@ -19,12 +19,12 @@
     "static/media/home.svg": "/too-cars-dashboard/static/media/home.fbc774a65400a0095a19e7a32bc97c48.svg",
     "static/media/plus-blue.svg": "/too-cars-dashboard/static/media/plus-blue.943355e12579d900f0965cac8c0799b1.svg",
     "static/media/plus-green.svg": "/too-cars-dashboard/static/media/plus-green.f1b29a221a9f13df8e04083a71907e6b.svg",
-    "main.b9cc0606.css.map": "/too-cars-dashboard/static/css/main.b9cc0606.css.map",
-    "main.b4f69423.js.map": "/too-cars-dashboard/static/js/main.b4f69423.js.map",
+    "main.4592ed45.css.map": "/too-cars-dashboard/static/css/main.4592ed45.css.map",
+    "main.3894821b.js.map": "/too-cars-dashboard/static/js/main.3894821b.js.map",
     "787.338dca04.chunk.js.map": "/too-cars-dashboard/static/js/787.338dca04.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9cc0606.css",
-    "static/js/main.b4f69423.js"
+    "static/css/main.4592ed45.css",
+    "static/js/main.3894821b.js"
   ]
 }
