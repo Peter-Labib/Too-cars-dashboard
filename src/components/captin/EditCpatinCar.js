@@ -31,7 +31,7 @@ const EditCpatinCar = () => {
     <div className='w-full '>
       <p className='title-added text-main'>{strings.CarEdit}</p>
       <form onSubmit={handleSubmit(onSubmit)} className='shadowed-container-added p-4 '>
-        <div className='grid gap-4 grid-cols-2 '>
+        <div className='grid gap-4 grid-cols-1 md:grid-cols-2 '>
           <div className='h-20'>
             <DropSelectW blue name='Car-model' label={strings.CarModel} />
           </div>

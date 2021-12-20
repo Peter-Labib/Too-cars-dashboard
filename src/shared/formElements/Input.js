@@ -15,9 +15,9 @@ const Input = React.forwardRef(
         <input
           className={`${classes} py-2.5 px-2 transition placeholder:text-gray-500  ${
             blue ? 'bg-secondary-100/40' : ' shadow-3xl-extend'
-          }  rounded-md border  focus:outline-none border-transparent  ${
-            error ? 'border-red-500' : 'focus:border-main'
-          }  `}
+          }  rounded-md border  focus:outline-none  ${
+            error ? 'border-red-500' : 'focus:border-main border-transparent'
+          }`}
           // value={value}
           ref={ref}
           onChange={onChange}

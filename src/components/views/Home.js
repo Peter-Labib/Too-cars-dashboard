@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faWifi, faCar } from '@fortawesome/free-solid-svg-icons'
 import Section from '../../shared/components/Section'
 import DetailCard from '../../shared/components/DetailCard'
+import HomePieChart from '../HomePieChart'
 import icon from '../../assets/icon/users.svg'
 
 const OsUsersCount = ({ color, os, count }) => (
@@ -136,6 +137,7 @@ const Home = () => {
               <span className='text-white'>8000</span>
             </div>
           </div>
+          {/* <HomePieChart /> */}
         </div>
         <div className='shadowed-container-added '>
           <div className='flex items-center transition hover:bg-secondary hover:text-main cursor-pointer font-semibold justify-between px-12 py-3'>

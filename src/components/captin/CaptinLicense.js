@@ -32,7 +32,7 @@ const CaptinLicense = () => {
         onSubmit={handleSubmit(onSubmit)}
         className='shadowed-container-added p-4'
       >
-        <div className='grid grid-cols-2 gap-4 '>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
           <Controller
             name='drivingLicenseFront'
             control={control}

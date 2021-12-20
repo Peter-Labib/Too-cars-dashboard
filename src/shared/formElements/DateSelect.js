@@ -4,20 +4,25 @@ import calenderIcon from '../../assets/icon/calender.svg'
 import 'react-datepicker/dist/react-datepicker.css'
 
 const DateSelect = forwardRef(
-  ({ blue, id = '', label, placeholder, onChange, value }, ref) => {
+  ({ blue, id = '', label, placeholder, onChange, value, error = '' }, ref) => {
     const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
-      <div
-        className={`${
-          blue ? 'bg-secondary-100/40' : ' shadow-3xl-extend'
-        } py-[9px] px-2 transition rounded-md border border-transparent flex items-center justify-between`}
-        onClick={onClick}
-        ref={ref}
-      >
-        <div>{value ? value : placeholder}</div>
-        <div>
-          <img src={calenderIcon} alt='Calender' />
+      <React.Fragment>
+        <div
+          className={`${
+            blue ? 'bg-secondary-100/40' : ' shadow-3xl-extend'
+          } py-[9px] px-2 transition rounded-md border ${
+            error ? 'border-red-500' : 'border-transparent'
+          } flex items-center justify-between`}
+          onClick={onClick}
+          ref={ref}
+        >
+          <div>{value ? value : placeholder}</div>
+          <div>
+            <img src={calenderIcon} alt='Calender' />
+          </div>
         </div>
-      </div>
+        <p className='error-text'>{error}</p>
+      </React.Fragment>
     ))
 
     return (

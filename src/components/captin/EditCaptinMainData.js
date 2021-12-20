@@ -18,7 +18,7 @@ const schema = yup.object({
   mobile: yup.number().required('Required'),
   email: yup.string().email('Please enter a valid email').required('Required'),
   password: yup.string().required('Required'),
-  // birth: yup.string().required(''),
+  birth: yup.date().required('Required'),
   nationality: yup.string().required('Required'),
   agency: yup.string().required('Required'),
   commission: yup.string().required('Required'),
@@ -32,7 +32,7 @@ const EditCaptinMainData = () => {
   const {
     handleSubmit,
     control,
-    formState: { errors,isDirty },
+    formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   })

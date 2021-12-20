@@ -11,8 +11,8 @@ import RejectedTrips from '../RejectedTrips'
 const EditCaptin = () => {
   return (
     <div>
-      <div className='flex flex-col lg:flex-row gap-x-4'>
-        <div className='flex flex-col gap-y-4 lg:gap-y-6  flex-grow '>
+      {/* <div className='flex flex-col lg:flex-row gap-x-4'>
+        <div className='grid flex-col gap-y-4 lg:gap-y-6  flex-grow '>
           <EditCaptinMainData />
           <div>
             <BankAccount />
@@ -29,6 +29,35 @@ const EditCaptin = () => {
         <div></div>
       </div>
       <div className='mt-6'>
+        <RejectedTrips />
+      </div>
+      <div className='mt-6'>
+        <BillCycle />
+      </div> */}
+
+      <div className='grid gap-4 grid-cols-10 lg:grid-rows-6'>
+        <div className='col-start-1 col-end-11 order-2 lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-7'>
+          <EditCaptinMainData />
+        </div>
+        <div className='col-start-1 col-end-11 order-1 lg:col-start-8 lg:col-end-11 lg:row-start-1 lg:row-end-3'>
+          <EditCaptinRouteBox />
+        </div>
+        <div className='col-start-1 col-end-11 order-3 lg:col-start-8 lg:col-end-11 lg:row-start-3 lg:row-end-7'>
+          <CaptinStatus />
+        </div>
+      </div>
+      <div className='grid gap-4 grid-cols-10 lg:grid-rows-5 mt-6'>
+        <div className='col-start-1 col-end-11 order-2 lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-3'>
+          <BankAccount />
+        </div>
+        <div className='col-start-1 col-end-11 order-3 lg:col-start-8 lg:col-end-11 lg:row-start-1 lg:row-end-3'>
+          <EditCpatinCar />
+        </div>
+        <div className='col-start-1 col-end-11 order-2 lg:col-start-1 lg:col-end-8 lg:row-start-2 lg:row-end-7'>
+          <CaptinLicense />
+        </div>
+      </div>
+      <div className='mt-6 lg:mt-0'>
         <RejectedTrips />
       </div>
       <div className='mt-6'>
