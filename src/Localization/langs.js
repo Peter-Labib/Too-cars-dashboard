@@ -3,6 +3,31 @@ export const langs = {
     en: 'en',
     ar: 'ar',
   },
+  //sidebar
+  Captins: {
+    en: 'Captins',
+    ar: 'السائقين',
+  },
+  CaptinControl: {
+    en: 'Captin Control',
+    ar: 'التحكم فى الكابتن',
+  },
+  CaptinEdit: {
+    en: 'Captin Edit',
+    ar: 'تعديل الكابتن',
+  },
+  Trips: {
+    en: 'Trips',
+    ar: 'الرحلات',
+  },
+  TripsLocations: {
+    en: 'Trips Location',
+    ar: 'اماكن الرحلات',
+  },
+  TripsControl: {
+    en: 'Trips Control',
+    ar: 'التحكم فى الرحلات',
+  },
   Id: {
     en: 'Id',
     ar: 'الهوية الشخصية',
@@ -593,6 +618,6 @@ export const langs = {
   },
   Control: {
     en: 'Control',
-    ar:'التحكم'
-  }
+    ar: 'التحكم',
+  },
 }

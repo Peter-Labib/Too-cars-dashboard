@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { useMediaQuery } from 'react-responsive'
 import Header from '../shared/components/Header'
 import NavLinks from '../shared/components/Navigation/NavLinks'
 import Sidebar from '../shared/components/Navigation/Sidebar'
@@ -11,11 +12,9 @@ import CaptinControl from './captin/views/CaptinControl'
 import TripsControl from './trips/views/TripsControl'
 import TripsLocations from './trips/views/TripsLocations'
 
-import useMediaQuery from '../utils/hooks/useMediaQuery'
-
 const AppContainer = () => {
   const [openSidebar, setopenSidebar] = useState(false)
-  const isDesktop = useMediaQuery(1024)
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' })
   console.log('appContainer')
 
   const sidebarToogle = () => {
@@ -39,9 +38,11 @@ const AppContainer = () => {
             openSidebar ? 'max-w-full min-w-[14rem]' : 'max-w-0 min-w-0'
           }`}
         >
-          <Sidebar>
-            <NavLinks />
-          </Sidebar>
+          {isDesktop && (
+            <Sidebar>
+              <NavLinks />
+            </Sidebar>
+          )}
         </div>
         <div
           className={`flex transition-all mx-auto self-start ${
@@ -52,7 +53,7 @@ const AppContainer = () => {
         >
           <div className='max-w-screen-xl mx-auto'>
             <Switch>
-              <Route path='/captin'>
+              <Route path='/captin-edit'>
                 <EditCaptin />
               </Route>
               <Route path='/captin-control'>
@@ -61,7 +62,7 @@ const AppContainer = () => {
               <Route path='/trips-locations'>
                 <TripsLocations />
               </Route>
-              <Route path='/trips'>
+              <Route path='/trips-control'>
                 <TripsControl />
               </Route>
               <Route path='/'>

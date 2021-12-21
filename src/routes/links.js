@@ -1,24 +1,35 @@
+import { strings } from '../Localization/languages'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
 const routeLinks = [
   {
-    name: 'calculation',
+    name: strings.Captins,
     icon: faFlag,
     children: [
       {
-        name: 'first',
-        path: '',
+        name: strings.CaptinControl,
+        path: '/captin-control',
         icon: faFlag,
+      },
+      {
+        name: strings.CaptinEdit,
+        path: '/captin-edit',
+        icon: faFlag
       },
     ],
   },
   {
-    name: 'countries and cities',
+    name: strings.Trips,
     icon: faFlag,
     children: [
       {
-        name: 'first',
-        path: '',
+        name: strings.TripsControl,
+        path: 'trips-control',
+        icon: faFlag,
+      },
+      {
+        name: strings.TripsLocations,
+        path: 'trips-locations',
         icon: faFlag,
       },
     ],
