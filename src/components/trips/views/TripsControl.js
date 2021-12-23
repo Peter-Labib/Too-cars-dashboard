@@ -1,5 +1,5 @@
 import React from 'react'
-import { strings } from '../../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 // import DropDownSelect from '../../shared/ui/DropDownSelect'
 import Table from '../../../shared/components/Table'
 import Input from '../../../shared/formElements/Input'
@@ -9,37 +9,39 @@ import SearchBtn from '../../../shared/formElements/SearchBtn'
 import ResetBtn from '../../../shared/formElements/ResetBtn'
 
 const TripsControl = () => {
+  const { t } = useTranslation()
+
   return (
     <div className='max-w-[300px] md:max-w-none'>
-      <p className='title-added'>{strings.TripsControl}</p>
+      <p className='title-added'>{t('Trips Control')}</p>
       <div className='grid md:grid-cols-5 lg:grid-cols-10 gap-2'>
-        <DetailCard count='500 ' countsFor={strings.CaptinWaiting} />
-        <DetailCard count='500 ' countsFor={strings.ClientCancelTrip} />
-        <DetailCard count='500 ' countsFor={strings.CaptinAcceptence} />
-        <DetailCard count='500 ' countsFor={strings.CaptinCancelTrip} />
-        <DetailCard count='500 ' countsFor={strings.CaptinArrived} />
-        <DetailCard count='500 ' countsFor={strings.TripBegin} />
-        <DetailCard count='500 ' countsFor={strings.Completed} />
-        <DetailCard count='500 ' countsFor={strings.Paid} />
-        <DetailCard count='500 ' countsFor={strings.NoCaptin} />
-        <DetailCard count='500 ' countsFor={strings.Total} />
+        <DetailCard count='500 ' countsFor={t('Captin waiting')} />
+        <DetailCard count='500 ' countsFor={t('Client cancel trip')} />
+        <DetailCard count='500 ' countsFor={t('Captin Acceptance')} />
+        <DetailCard count='500 ' countsFor={t('Captin cancel trip')} />
+        <DetailCard count='500 ' countsFor={t('Captin arrived')} />
+        <DetailCard count='500 ' countsFor={t('Trip begin')} />
+        <DetailCard count='500 ' countsFor={t('completed')} />
+        <DetailCard count='500 ' countsFor={t('Paid')} />
+        <DetailCard count='500 ' countsFor={t('No captin')} />
+        <DetailCard count='500 ' countsFor={t('Total')} />
       </div>
       <form className='py-4 mb-8'>
         <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-2 mb-4'>
           {/* <DropDownSelect placeholder={strings.City} /> */}
 
-          <DropSelectW placeholder={strings.City} />
-          <DropSelectW placeholder={strings.Agency} />
-          <DropSelectW placeholder={strings.CarType} />
-          <DropSelectW placeholder={strings.CarModel} />
-          <DropSelectW placeholder={strings.Status} />
-          <DropSelectW placeholder={strings.ReasonOfCancelation} />
-          <Input placeholder={strings.AddressFrom} type='text' />
-          <Input placeholder={strings.AddressTo} type='text' />
-          <DropSelectW placeholder={strings.Client} />
-          <DropSelectW placeholder={strings.Captin} />
-          <DropSelectW placeholder={strings.Promo} />
-          <Input placeholder={strings.MaxDistance} />
+          <DropSelectW placeholder={t('City')} />
+          <DropSelectW placeholder={t('Agency')} />
+          <DropSelectW placeholder={t('Car type')} />
+          <DropSelectW placeholder={t('Car model')} />
+          <DropSelectW placeholder={t('Status')} />
+          <DropSelectW placeholder={t('Reason of cancellation')} />
+          <Input placeholder={t('Address from')} type='text' />
+          <Input placeholder={t('Address to')} type='text' />
+          <DropSelectW placeholder={t('Client')} />
+          <DropSelectW placeholder={t('Captin')} />
+          <DropSelectW placeholder={t('Promo')} />
+          <Input placeholder={t('Max distance')} />
         </div>
         <div className='flex gap-x-4 items-center'>
           <SearchBtn type='submit' />
@@ -48,15 +50,15 @@ const TripsControl = () => {
       </form>
       <Table
         head={[
-          strings.TripNumber,
-          strings.City,
-          strings.ClientName,
-          strings.Status,
-          strings.CreatedAt,
-          strings.Car,
-          strings.Distance,
-          strings.Edit,
-          strings.Chat,
+          t('Trip number'),
+          t('City'),
+          t('Client name'),
+          t('Status'),
+          t('Created at'),
+          t('Car'),
+          t('Distance'),
+          t('Edit'),
+          t('Chat'),
         ]}
         body={[
           {

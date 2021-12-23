@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import Input from '../../shared/formElements/Input'
 import Button from '../../shared/formElements/Button'
 import logo from '../../assets/img/Untitled-2.png'
@@ -13,6 +13,8 @@ const schema = yup.object({
 })
 
 const Login = () => {
+  const { t } = useTranslation()
+
   const {
     handleSubmit,
     control,
@@ -40,7 +42,9 @@ const Login = () => {
               control={control}
               render={({ field }) => (
                 <Input
-                  label={strings.Email}
+                  login
+                  blue
+                  label={t('Email')}
                   type='text'
                   name='email'
                   id='login-email'
@@ -57,7 +61,9 @@ const Login = () => {
               control={control}
               render={({ field }) => (
                 <Input
-                  label={strings.Password}
+                  login
+                  blue
+                  label={t('Password')}
                   type='password'
                   name='password'
                   id='login-password'
@@ -70,7 +76,7 @@ const Login = () => {
           </div>
           <div className='mx-auto w-7/12'>
             <Button type='submit' login>
-              {strings.Login}
+              {t('Login')}
             </Button>
           </div>
         </form>

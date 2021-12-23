@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { Listbox, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import CardDetail from '../../shared/components/DetailCard'
 
 const cycles = [
@@ -20,13 +20,14 @@ const cycles = [
 
 const BillCycle = () => {
   const [selected, setSelected] = useState('')
+  const { t } = useTranslation()
   return (
     <div className='w-full'>
       <Listbox value={selected} onChange={setSelected}>
         <div className='relative'>
           <Listbox.Button className='bg-main text-white p-2 flex justify-between items-center rounded-t-lg w-60'>
             <span className='block truncate font-semibold text-lg'>
-              {strings.BillCycle}
+              {t('Bill cycle')}
             </span>
             <span className='flex items-center'>
               <FontAwesomeIcon icon={faChevronDown} />
@@ -66,17 +67,17 @@ const BillCycle = () => {
                             !active && !selected ? 'text-red-500' : ''
                           } `}
                         >
-                          {strings.From}
+                          {t('from')}
                         </span>
                         <span>{cycle.from}</span>
                       </p>
                       <p className='flex items-center gap-x-2'>
                         <span
                           className={`${
-                            !active && !selected ? 'text-green--extended' : ''
+                            !active && !selected ? 'text-green-600' : ''
                           }`}
                         >
-                          {strings.To}
+                          {t('to')}
                         </span>
                         <span>{cycle.to}</span>
                       </p>
@@ -89,62 +90,26 @@ const BillCycle = () => {
         </div>
       </Listbox>
       <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 lg:gap-6 p-6 shadowed-container-added '>
+        <CardDetail count='1500' countsFor={t('Paid trips')} />
+        <CardDetail count='1500' countsFor={t('Online hours')} />
+        <CardDetail count='1500' countsFor={t('Completed trip rate')} />
+        <CardDetail count='1500' countsFor={t('Captin rate')} />
+        <CardDetail count='1500' countsFor={t('Paid trip price')} />
         <CardDetail
           count='1500'
-          countsFor={strings.PaidTrips}
+          countsFor={t('Captin commission of paid trips')}
         />
+        <CardDetail count='1500' countsFor={t('Promo cost')} />
+        <CardDetail count='1500' countsFor={t('Guarantee periods count')} />
+        <CardDetail count='1500' countsFor={t('Add balance total')} />
+        <CardDetail count='1500' countsFor={t('Discount balance total')} />
         <CardDetail
           count='1500'
-          countsFor={strings.OnlineHours}
+          countsFor={t('Driver balance before billCycle end')}
         />
-        <CardDetail
-          count='1500'
-          countsFor={strings.CompletedTripsRate}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.CaptinRate}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.PaidTripsPrice}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.CaptinCommisionOfPaidTrips}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.PromoCost}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.GuaranteePeriodsCount}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.AddBalanceTotal}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.DiscountBalanceTotal}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.DriverBalanceBeforeBillCycleEnd}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.AgencyCommission}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.Amount}
-        />
-        <CardDetail
-          count='1500'
-          countsFor={strings.Status}
-        />
+        <CardDetail count='1500' countsFor={t('Agency commission')} />
+        <CardDetail count='1500' countsFor={t('Amount')} />
+        <CardDetail count='1500' countsFor={t('Status')} />
       </div>
     </div>
   )

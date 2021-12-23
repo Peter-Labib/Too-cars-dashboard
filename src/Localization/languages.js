@@ -10,6 +10,12 @@ Object.getOwnPropertyNames(langs).forEach((e) => {
   ar[e] = langs[e]?.ar
 })
 
+const english = Object.keys(langs).map(e=>{
+return {
+  e:langs[en]
+}
+})
+console.log(english)
 export const strings = new LocalizedStrings({
   en,
   ar,

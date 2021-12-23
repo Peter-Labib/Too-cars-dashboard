@@ -1,11 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import ImagePicker from '../../shared/formElements/ImgPicker/ImgPicker'
 import Button from '../../shared/formElements/Button'
-
-import { strings } from '../../Localization/languages'
 // import { validateImage } from '../../utils/functions'
 
 // const schema = yup.object({
@@ -16,6 +15,7 @@ import { strings } from '../../Localization/languages'
 // })
 
 const CaptinLicense = () => {
+  const { t } = useTranslation()
   const {
     control,
     handleSubmit,
@@ -27,7 +27,7 @@ const CaptinLicense = () => {
 
   return (
     <div className='w-full'>
-      <p className='title-added'>{strings.CaptinLicenseImg}</p>
+      <p className='title-added'>{t('Captin license img')}</p>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className='shadowed-container-added p-4'
@@ -38,7 +38,7 @@ const CaptinLicense = () => {
             control={control}
             render={({ field }) => (
               <ImagePicker
-                label={strings.DrivingLicenseFront}
+                label={t('Driving License Front')}
                 id='driving-license-front'
                 name='drivingLicenseFront'
                 {...field}
@@ -46,19 +46,19 @@ const CaptinLicense = () => {
             )}
           />
 
-          <ImagePicker label={strings.DrivingLicenseBack} />
-          <ImagePicker label={strings.DriverPhoto} />
-          <ImagePicker label={strings.CarImageWithPlateNumber} />
-          <ImagePicker label={strings.CarLicensePhotoFront} />
-          <ImagePicker label={strings.CarLicensePhotoBack} />
-          <ImagePicker label={strings.DrivingLicenseNumber} />
-          <ImagePicker label={strings.CarLicenseNumber} />
-          <ImagePicker label={strings.NationalIdNumber} />
-          <ImagePicker label={strings.NationalIdPhotoFront} />
-          <ImagePicker label={strings.NationalIdPhotoBack} />
+          <ImagePicker label={t('Driving License Back')} />
+          <ImagePicker label={t('Driver Photo')} />
+          <ImagePicker label={t('Car Image With Plate Number')} />
+          <ImagePicker label={t('Car License Photo Front')} />
+          <ImagePicker label={t('Car License Photo Back')} />
+          <ImagePicker label={t('Driving License Number')} />
+          <ImagePicker label={t('Driving License Number')} />
+          <ImagePicker label={t('National Id Number')} />
+          <ImagePicker label={t('National Id Photo Front')} />
+          <ImagePicker label={t('National Id Photo Back')} />
         </div>
         <div className='mx-auto max-w-min mt-4'>
-          <Button type='submit'>submit</Button>
+          <Button type='submit'>{t('Submit')}</Button>
         </div>
       </form>
     </div>

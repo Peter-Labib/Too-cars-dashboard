@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone'
 import Lightbox from 'react-image-lightbox'
 import styles from './ImgPicker.module.scss'
+import 'react-image-lightbox/style.css'
 
 const ImgPicker = React.forwardRef(
   ({ label, name, onChange, id, error, small }, ref) => {

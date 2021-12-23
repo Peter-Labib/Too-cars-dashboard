@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
-import { strings } from '../../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import Input from '../../../shared/formElements/Input'
 import DropSelect from '../../../shared/formElements/DropSelectW/DropSelectW'
 import DateSelect from '../../../shared/formElements/DateSelect'
@@ -8,6 +8,7 @@ import SearchBtn from '../../../shared/formElements/SearchBtn'
 import ResetBtn from '../../../shared/formElements/ResetBtn'
 
 const CaptinControlForm = () => {
+  const { t } = useTranslation()
   const { control, handleSubmit, reset } = useForm()
   const onSubmit = (e) => console.log(e)
   return (
@@ -21,7 +22,7 @@ const CaptinControlForm = () => {
               blue
               name='name'
               id='captin-ctr-name'
-              label={strings.Name}
+              label={t('Name')}
               type='text'
               dir='auto'
               {...field}
@@ -36,7 +37,7 @@ const CaptinControlForm = () => {
               blue
               name='mobile'
               id='captin-ctr-mobile'
-              label={strings.Mobile}
+              label={t('Mobile')}
               type='text'
               dir='auto'
               {...field}
@@ -51,7 +52,7 @@ const CaptinControlForm = () => {
               blue
               name='email'
               id='captin-ctr-email'
-              label={strings.Email}
+              label={t('Email')}
               type='text'
               dir='auto'
               {...field}
@@ -66,7 +67,7 @@ const CaptinControlForm = () => {
               blue
               name='city'
               id='captin-ctr-city'
-              label={strings.City}
+              label={t('City')}
               options={[
                 { value: 'a', label: 'a' },
                 { value: 'b', label: 'b' },
@@ -85,7 +86,7 @@ const CaptinControlForm = () => {
               blue
               name='birthday'
               id='captin-ctr-birthday'
-              label={strings.BirthDate}
+              label={t('Birth Date')}
               {...field}
             />
           )}
@@ -98,7 +99,7 @@ const CaptinControlForm = () => {
               blue
               name='captinStatus'
               id='captin-ctr-status'
-              label={strings.CaptinStatus}
+              label={t('Captin status')}
               options={[
                 { value: 'a', label: 'a' },
                 { value: 'b', label: 'b' },
@@ -117,7 +118,7 @@ const CaptinControlForm = () => {
               blue
               name='captinLicense'
               id='captin-ctr-captin-license'
-              label={strings.CaptinLicense}
+              label={t('Captin license')}
               type='text'
               dir='auto'
               {...field}
@@ -132,7 +133,7 @@ const CaptinControlForm = () => {
               blue
               name='carLicense'
               id='captin-ctr-car-license'
-              label={strings.CarLicense}
+              label={t('Car license')}
               type='text'
               dir='auto'
               {...field}
@@ -146,7 +147,7 @@ const CaptinControlForm = () => {
             <Input
               blue
               id='captin-ctr-status'
-              label={strings.Status}
+              label={t('Status')}
               options={[
                 { value: 'a', label: 'a' },
                 { value: 'b', label: 'b' },
@@ -167,7 +168,7 @@ const CaptinControlForm = () => {
               blue
               name='adminActive'
               id='captin-ctr-admin-active'
-              label={strings.AdminActivation}
+              label={t('Admin Activation')}
               options={[
                 { value: 'a', label: 'a' },
                 { value: 'b', label: 'b' },
@@ -186,7 +187,7 @@ const CaptinControlForm = () => {
               blue
               name='agency'
               id='captin-ctr-agency'
-              label={strings.Agency}
+              label={t('Agency')}
               options={[
                 { value: 'a', label: 'a' },
                 { value: 'b', label: 'b' },
@@ -205,7 +206,7 @@ const CaptinControlForm = () => {
               blue
               name='balace'
               id='captin-ctr-balance'
-              label={strings.Balance}
+              label={t('Balance')}
               type='text'
               dir='auto'
               {...field}
@@ -220,7 +221,7 @@ const CaptinControlForm = () => {
               blue
               name='minTrips'
               id='captin-ctr-minTrips'
-              label={strings.MinTrips}
+              label={t('Minimum trips')}
               type='text'
               dir='auto'
               {...field}
@@ -235,7 +236,7 @@ const CaptinControlForm = () => {
               blue
               name='maxTrips'
               id='captin-ctr-maxTrips'
-              label={strings.MaxTrips}
+              label={t('Maxmum trips')}
               type='text'
               dir='auto'
               {...field}
@@ -250,7 +251,7 @@ const CaptinControlForm = () => {
               blue
               name='from'
               id='captin-ctr-from'
-              label={strings.From}
+              label={t('from')}
               {...field}
             />
           )}
@@ -263,7 +264,7 @@ const CaptinControlForm = () => {
               blue
               name='to'
               id='captin-ctr-to'
-              label={strings.To}
+              label={t('to')}
               {...field}
             />
           )}

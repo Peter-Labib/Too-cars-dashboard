@@ -1,6 +1,6 @@
 import React from 'react'
 import CountUp from 'react-countup'
-import { strings } from '../../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import CaptinControlForm from '../forms/CaptinControlForm'
 import distanceIcon from '../../../assets/icon/distance.svg'
 import editIcon from '../../../assets/icon/edit.svg'
@@ -22,6 +22,8 @@ const data = [
 ]
 
 const CaptinControl = () => {
+  const { t } = useTranslation()
+
   const Card = ({ title, count }) => (
     <div>
       <div className='px-4  py-2 lg:py-1 bg-secondary-100/50 rounded-lg'>
@@ -33,12 +35,12 @@ const CaptinControl = () => {
 
   return (
     <div>
-      <p className='title-added'>{strings.CaptinControl}</p>
+      <p className='title-added'>{t('CaptinControl')}</p>
       <div className='grid grid-cols-4 text-center mt-4 gap-x-2 lg:gap-x-3 w-fit'>
-        <Card title={strings.Total} count={14500} />
-        <Card title={strings.Android} count={500} />
-        <Card title={strings.Iphone} count={500} />
-        <Card title={strings.Web} count={500} />
+        <Card title={t('Total')} count={14500} />
+        <Card title={t('Android')} count={500} />
+        <Card title={t('iphone')} count={500} />
+        <Card title={t('Web')} count={500} />
       </div>
 
       <CaptinControlForm />
@@ -47,15 +49,15 @@ const CaptinControl = () => {
         <table className=' table-auto w-full'>
           <thead>
             <tr>
-              <th>{strings.Name}</th>
-              <th>{strings.Status}</th>
-              <th>{strings.Trips}</th>
-              <th>{strings.Agency}</th>
-              <th>{strings.Cash}</th>
-              <th>{strings.RegisteredBy}</th>
-              <th>{strings.Balance}</th>
-              <th>{strings.Distance}</th>
-              <th>{strings.Control}</th>
+              <th>{t('Name')}</th>
+              <th>{t('Status')}</th>
+              <th>{t('Trips')}</th>
+              <th>{t('Agency')}</th>
+              <th>{t('Cash')}</th>
+              <th>{t('Registered by')}</th>
+              <th>{t('Balance')}</th>
+              <th>{t('Distance')}</th>
+              <th>{t('Control')}</th>
             </tr>
           </thead>
           <tbody className='border border-gray-200'>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -21,6 +21,7 @@ const schema = yup.object({
 })
 
 const EditCpatinCar = () => {
+  const { t } = useTranslation()
   const { handleSubmit, register } = useForm({
     resolver: yupResolver(schema),
   })
@@ -29,33 +30,36 @@ const EditCpatinCar = () => {
 
   return (
     <div className='w-full '>
-      <p className='title-added text-main'>{strings.CarEdit}</p>
-      <form onSubmit={handleSubmit(onSubmit)} className='shadowed-container-added p-4 '>
+      <p className='title-added text-main'>{t('Car Edit')}</p>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className='shadowed-container-added p-4 '
+      >
         <div className='grid gap-4 grid-cols-1 md:grid-cols-2 '>
           <div className='h-20'>
-            <DropSelectW blue name='Car-model' label={strings.CarModel} />
+            <DropSelectW blue name='Car-model' label={t('Car model')} />
           </div>
-          <DropSelectW blue name='Car-model' label={strings.CarColor} />
-          <DropSelectW blue name='Car model' label={strings.ProductionDate} />
+          <DropSelectW blue name='Car-model' label={t('Car color')} />
+          <DropSelectW blue name='Car model' label={t('Production date')} />
           {/* <ImgPicker label={strings.CarImg} small /> */}
-          <ImgPicker label={strings.CarImg} small />
+          <ImgPicker label={t('Car img')} small />
           <IconedInput
             {...register('arabicCarNumber')}
             type='text'
-            label={strings.ArabicCarNum}
+            label={t('Arabic car number')}
           >
             <FontAwesomeIcon icon={faCar} className='text-main' />
           </IconedInput>
           <IconedInput
             {...register('englishCarNumber')}
             type='text'
-            label={strings.ArabicCarNum}
+            label={t('English car number')}
           >
             <FontAwesomeIcon icon={faCar} className='text-main' />
           </IconedInput>
         </div>
         <div className='mx-auto max-w-min mt-4'>
-          <Button type='submit'>{strings.Submit}</Button>
+          <Button type='submit'>{t('Submit')}</Button>
         </div>
       </form>
     </div>

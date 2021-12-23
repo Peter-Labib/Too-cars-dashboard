@@ -1,5 +1,5 @@
 import React from 'react'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faWifi, faCar } from '@fortawesome/free-solid-svg-icons'
 import Section from '../../shared/components/Section'
@@ -19,63 +19,64 @@ const OsUsersCount = ({ color, os, count }) => (
 )
 
 const Home = () => {
+  const { t } = useTranslation()
   return (
     <div className='grid grid-cols-6 gap-x-4'>
       {/* first col */}
       <div className='col-span-6 md:col-span-3 lg:col-span-2 '>
-        <Section title={strings.DriversEgypt} titleCentered>
+        <Section title={t('Drivers Egypt')} titleCentered>
           <div className='grid grid-cols-2 gap-x-2 gap-y-4 pb-4 px-4'>
             <DetailCard
               textColor='text-[#00BA3F]'
               count='45484'
-              countsFor={strings.MobileAndAdminActive}
+              countsFor={t('Mobile and Admin Active')}
             />
             <DetailCard
               textColor='text-[#FC3030]'
               count='45484'
-              countsFor={strings.AdminInactive}
+              countsFor={t('Admin Inactive')}
             />
-            <DetailCard count='45484' countsFor={strings.AdminSuspend} />
-            <DetailCard count='45484' countsFor={strings.AdminUnderRevision} />
+            <DetailCard count='45484' countsFor={t('Admin Suspend')} />
+            <DetailCard count='45484' countsFor={t('Admin Under Revision')} />
             <DetailCard
               count='45484'
-              countsFor={strings.AdminWaitingApproval}
+              countsFor={t('Admin Waiting approval')}
             />
           </div>
         </Section>
       </div>
       {/* third col */}
       <div className='col-span-6 md:col-span-3 lg:col-span-2 self-start flex flex-col gap-y-4 lg:gap-y-8 mb-4'>
-        <Section title={strings.PessengersEgypt} titleCentered>
+        <Section title={t('Pessengers Egypt')} titleCentered>
           <div className='grid grid-cols-2 gap-x-2 gap-y-4  pb-4 px-4'>
             <DetailCard
               textColor='text-green--extended'
               count='45484'
-              countsFor={strings.MobileActive}
+              countsFor={t('Mobile Active')}
             />
             <DetailCard
               textColor='text-purple--extended'
               count='45484'
-              countsFor={strings.MobileInactive}
+              countsFor={t('Mobile Inactive')}
             />
             <DetailCard
               textColor='text-black--extended'
               count='45484'
-              countsFor={strings.Suspend}
+              countsFor={t('Suspend')}
             />
           </div>
         </Section>
-        <Section title={strings.SupervisorsTrips} titleCentered>
+        <Section title={t('Supervisors Trips')} titleCentered>
           <div className='grid grid-cols-2 gap-x-2 gap-y-4  pb-4 px-4'>
             <DetailCard
               textColor='text-red--extended'
               count='45484'
-              countsFor={strings.Busy}
+              countsFor={t('Busy')}
             />
             <DetailCard
               textColor='text-green--extended'
               count='45484'
-              countsFor={strings.TodayPaidTrips}
+              countsFor={t('Today Paid Trips')}
             />
           </div>
         </Section>
@@ -88,13 +89,13 @@ const Home = () => {
             <span>
               <img src={icon} alt='users' />
             </span>
-            <span className='font-semibold'>{strings.AllUsers}</span>
+            <span className='font-semibold'>{t('All Users')}</span>
             <span className='text-main font-semibold'>64128</span>
           </div>
           <div className='flex gap-x-2'>
-            <OsUsersCount color='#60A0FF' os={strings.Android} count='15887' />
-            <OsUsersCount color='#FF6161' os={strings.Iphone} count='15887' />
-            <OsUsersCount color='#00BB40' os={strings.Web} count='15887' />
+            <OsUsersCount color='#60A0FF' os={t('Android')} count='15887' />
+            <OsUsersCount color='#FF6161' os={t('Iphone')} count='15887' />
+            <OsUsersCount color='#00BB40' os={t('Web')} count='15887' />
           </div>
           <div className='w-full relative h-44'>
             <div
@@ -141,19 +142,19 @@ const Home = () => {
         </div>
         <div className='shadowed-container-added '>
           <div className='flex items-center transition hover:bg-secondary hover:text-main cursor-pointer font-semibold justify-between px-12 py-3'>
-            <p className='px-8'>{strings.MobileTypes}</p>
+            <p className='px-8'>{t('mobile types')}</p>
             <span className='px-1'>
               <FontAwesomeIcon icon={faMobileAlt} />
             </span>
           </div>
           <div className='flex items-center transition hover:bg-secondary hover:text-main cursor-pointer font-semibold justify-between px-12 py-3'>
-            <p className='px-8'>{strings.NetworksTypes}</p>
+            <p className='px-8'>{t('networks types')}</p>
             <span className=''>
               <FontAwesomeIcon icon={faWifi} />
             </span>
           </div>
           <div className='flex items-center transition hover:bg-secondary hover:text-main cursor-pointer font-semibold justify-between px-12 py-3'>
-            <p className='px-8'>{strings.CarTypes}</p>
+            <p className='px-8'>{t('car types')}</p>
             <span className=''>
               <FontAwesomeIcon icon={faCar} />
             </span>

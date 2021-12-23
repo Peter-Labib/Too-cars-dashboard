@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import Input from '../../shared/formElements/Input'
 import Button from '../../shared/formElements/Button'
 import Dropdown from '../../shared/formElements/Dropdown'
@@ -29,6 +29,7 @@ const schema = yup.object({
 })
 
 const EditCaptinMainData = () => {
+  const { t } = useTranslation()
   const {
     handleSubmit,
     control,
@@ -40,7 +41,7 @@ const EditCaptinMainData = () => {
   const onSubmit = (data) => console.log(data)
   return (
     <div className='w-full'>
-      <p className='title-added'>{strings.CaptinProfile}</p>
+      <p className='title-added'>{t('Captin Profile')}</p>
       <form
         className='shadowed-container-added p-4'
         onSubmit={handleSubmit(onSubmit)}
@@ -59,7 +60,7 @@ const EditCaptinMainData = () => {
                   error={errors.name?.message}
                   name='name'
                   id='edit-captin-name'
-                  label={strings.Name}
+                  label={t('Name')}
                   type='text'
                   dir='auto'
                   {...field}
@@ -77,7 +78,7 @@ const EditCaptinMainData = () => {
                   error={errors.city?.message}
                   name='city'
                   id='edit-captin-city'
-                  label={strings.City}
+                  label={t('City')}
                   type='text'
                   dir='auto'
                   {...field}
@@ -95,7 +96,7 @@ const EditCaptinMainData = () => {
                   error={errors.address?.message}
                   name='address'
                   id='edit-captin-address'
-                  label={strings.Address}
+                  label={t('Address')}
                   type='text'
                   dir='auto'
                   {...field}
@@ -113,7 +114,7 @@ const EditCaptinMainData = () => {
                   error={errors.mobile?.message}
                   name='mobile'
                   id='edit-captin-mobile'
-                  label={strings.Mobile}
+                  label={t('Mobile')}
                   type='tel'
                   {...field}
                 />
@@ -130,7 +131,7 @@ const EditCaptinMainData = () => {
                   error={errors.email?.message}
                   name='email'
                   id='edit-captin-email'
-                  label={strings.Email}
+                  label={t('Email')}
                   type='email'
                   {...field}
                 />
@@ -147,7 +148,7 @@ const EditCaptinMainData = () => {
                   error={errors.password?.message}
                   name='password'
                   id='edit-captin-password'
-                  label={strings.Password}
+                  label={t('Password')}
                   type='password'
                   {...field}
                 />
@@ -164,7 +165,7 @@ const EditCaptinMainData = () => {
                   error={errors.birth?.message}
                   name='birth'
                   id='edit-captin-birth'
-                  label={strings.BirthDate}
+                  label={t('Birth Date')}
                   // type='text'
                   {...field}
                 />
@@ -181,7 +182,7 @@ const EditCaptinMainData = () => {
                   error={errors.nationality?.message}
                   name='nationality'
                   id='edit-captin-nationality'
-                  label={strings.Nationality}
+                  label={t('Nationality')}
                   type='text'
                   {...field}
                 />
@@ -205,7 +206,7 @@ const EditCaptinMainData = () => {
                   error={errors.agency?.message}
                   name='agency'
                   id='edit-captin-agency'
-                  label={strings.Agency}
+                  label={t('Agency')}
                   options={[
                     { value: 'a', label: 'a' },
                     { value: 'b', label: 'b' },
@@ -228,7 +229,7 @@ const EditCaptinMainData = () => {
                   error={errors.commission?.message}
                   name='commission'
                   id='edit-captin-commission'
-                  label={strings.Commission}
+                  label={t('Commission')}
                   options={[
                     { value: 'a', label: 'a' },
                     { value: 'b', label: 'b' },
@@ -250,7 +251,7 @@ const EditCaptinMainData = () => {
                   error={errors.refferalCodeDriver?.message}
                   name='refferalCodeDriver'
                   id='edit-captin-refferal-code-driver'
-                  label={strings.RefferalCodeDriver}
+                  label={t('Refferal Code Driver')}
                   type='text'
                   {...field}
                 />
@@ -267,7 +268,7 @@ const EditCaptinMainData = () => {
                   error={errors.refferalCodePassenger?.message}
                   name='refferal-code-passenger'
                   id='edit-captin-refferal-code-passenger'
-                  label={strings.RefferalCodePassenger}
+                  label={t('Refferal Code Passenger')}
                   type='text'
                   {...field}
                 />
@@ -284,7 +285,7 @@ const EditCaptinMainData = () => {
                   error={errors.bonus?.message}
                   name='bonus'
                   id='edit-captin-bonus'
-                  label={strings.Bonus}
+                  label={t('Bonus')}
                   options={[
                     { value: 'a', label: 'a' },
                     { value: 'b', label: 'b' },
@@ -306,7 +307,7 @@ const EditCaptinMainData = () => {
                   error={errors.guarantee?.message}
                   name='guarantee'
                   id='edit-captin-guarantee'
-                  label={strings.Guarantee}
+                  label={t('Guarantee')}
                   options={[
                     { value: 'a', label: 'a' },
                     { value: 'b', label: 'b' },
@@ -320,15 +321,17 @@ const EditCaptinMainData = () => {
           </div>
           <div className='col-span-4 mt-4'>
             <div className='flex items-center justify-between px-8 flex-col md:flex-row place-items-center'>
-              <Radio title={strings.CityToCity} />
-              <Radio title={strings.AdminActivation} />
-              <Radio title={strings.PhoneActivated} />
-              <Radio title={strings.Gender} />
+              <Radio title={t('City to City')} />
+              <Radio title={t('Admin Activation')} />
+              <Radio title={t('Phone Activated')} />
+              <Radio title={t('Gender')} />
             </div>
           </div>
         </div>
         <div className='mx-auto max-w-min w-3/12 mt-4'>
-          <Button type='submit' errors={errors} >{strings.Submit}</Button>
+          <Button type='submit' errors={errors}>
+            {t('Submit')}
+          </Button>
         </div>
       </form>
     </div>

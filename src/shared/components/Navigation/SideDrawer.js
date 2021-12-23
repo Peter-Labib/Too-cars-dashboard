@@ -14,7 +14,7 @@ const SideDrawer = ({ onClick, children, show }) => {
       nodeRef={nodeRef}
     >
       <aside
-        className='fixed ltr:left-0 rtl:right-0 top-0 w-4/5 z-50 shadow-lg h-screen overflow-y-auto bg-white text-main'
+        className='fixed ltr:left-0 rtl:right-0 top-0 w-2/3 z-50 shadow-lg h-screen overflow-y-auto bg-white text-main'
         onClick={onClick}
         ref={nodeRef}
       >

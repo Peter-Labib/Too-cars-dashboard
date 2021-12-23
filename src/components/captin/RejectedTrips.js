@@ -1,19 +1,13 @@
 import React from 'react'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 import Table from '../../shared/components/Table'
 
 const RejectedTrips = () => {
+  const { t } = useTranslation()
   return (
     <div>
-      <p className='title-added'>{strings.RejectedTrips}</p>
-      <Table
-        head={[
-          strings.Id,
-          strings.TripNumber,
-          strings.status,
-          strings.CreatedAt,
-        ]}
-      />
+      <p className='title-added'>{t('Rejected trips')}</p>
+      <Table head={[t('Id'), t('Trip number'), t('status'), t('Created at')]} />
     </div>
   )
 }

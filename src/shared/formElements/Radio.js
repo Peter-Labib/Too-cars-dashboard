@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { strings } from '../../Localization/languages'
+import { useTranslation } from 'react-i18next'
 
 const Radio = ({ title, value = 'false' }) => {
   const [val, setVal] = useState()
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     setVal(value)
@@ -26,7 +28,7 @@ const Radio = ({ title, value = 'false' }) => {
             onChange={onChangeHandler}
             checked={val === 'false'}
           ></input>
-          <label>{strings.No}</label>
+          <label>{t('No')}</label>
         </div>
         <div className='flex items-center gap-x-1'>
           <input
@@ -37,7 +39,7 @@ const Radio = ({ title, value = 'false' }) => {
             onChange={onChangeHandler}
             checked={val === 'true'}
           ></input>
-          <label name={title}>{strings.Yes}</label>
+          <label name={title}>{t('Yes')}</label>
         </div>
       </div>
     </div>
