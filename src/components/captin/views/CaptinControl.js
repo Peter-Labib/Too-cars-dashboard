@@ -35,7 +35,7 @@ const CaptinControl = () => {
 
   return (
     <div>
-      <p className='title-added'>{t('CaptinControl')}</p>
+      <p className='title-added'>{t('Captin Control')}</p>
       <div className='grid grid-cols-4 text-center mt-4 gap-x-2 lg:gap-x-3 w-fit'>
         <Card title={t('Total')} count={14500} />
         <Card title={t('Android')} count={500} />
@@ -45,7 +45,7 @@ const CaptinControl = () => {
 
       <CaptinControlForm />
 
-      <div className='overflow-x-auto mx-auto lg:overflow-x-hidden my-16 max-w-[93vw]'>
+      <div className='table-container'>
         <table className=' table-auto w-full'>
           <thead>
             <tr>
@@ -61,25 +61,29 @@ const CaptinControl = () => {
             </tr>
           </thead>
           <tbody className='border border-gray-200'>
-            {data.map((dat, i) => (
+            {[0, 0, 0, 0, 0].map((i) => (
               <tr key={i}>
                 <td>
-                  <p className='text-main text-sm font-semibold'>{dat.name}</p>
-                  <p className='text-xs'>{dat.city}</p>
-                  <p className='text-xs'>{dat.mobile}</p>
+                  <p className='text-main text-sm font-semibold'>peter</p>
+                  <p className='text-xs'>cairo</p>
+                  <p className='text-xs'>01010156849</p>
                 </td>
-                <td>{dat.status}</td>
-                <td>{dat.trips}</td>
-                <td>{dat.agency}</td>
-                <td>{dat.cash}</td>
-                <td>{dat.register}</td>
-                <td>{dat.balance}</td>
-                <td>{dat.distance}</td>
+                <td>online</td>
+                <td>0</td>
+                <td>agency</td>
+                <td>00</td>
+                <td>direct</td>
+                <td>10</td>
+                <td>0</td>
                 <td>
                   <div className='flex flex-wrap justify-evenly py-1 gap-3 lg:gap-x-2'>
-                    <img src={distanceIcon} alt='distance' />
-                    <img src={editIcon} alt='edit' />
-                    <img src={chatIcon} alt='chat' />
+                    <img
+                      src={distanceIcon}
+                      alt='distance'
+                      className='cursor-pointer'
+                    />
+                    <img src={editIcon} alt='edit' className='cursor-pointer' />
+                    <img src={chatIcon} alt='chat' className='cursor-pointer' />
                   </div>
                 </td>
               </tr>

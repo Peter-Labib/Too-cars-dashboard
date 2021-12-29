@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import Input from '../../../shared/formElements/Input'
-import DropSelect from '../../../shared/formElements/DropSelectW/DropSelectW'
+import Dropdown from '../../../shared/formElements/Dropdown/Dropdown'
 import DateSelect from '../../../shared/formElements/DateSelect'
 import SearchBtn from '../../../shared/formElements/SearchBtn'
 import ResetBtn from '../../../shared/formElements/ResetBtn'
@@ -63,7 +63,7 @@ const CaptinControlForm = () => {
           name='city'
           control={control}
           render={({ field }) => (
-            <DropSelect
+            <Dropdown
               blue
               name='city'
               id='captin-ctr-city'
@@ -95,7 +95,7 @@ const CaptinControlForm = () => {
           name='captinStatus'
           control={control}
           render={({ field }) => (
-            <DropSelect
+            <Dropdown
               blue
               name='captinStatus'
               id='captin-ctr-status'
@@ -164,7 +164,7 @@ const CaptinControlForm = () => {
           name='adminActive'
           control={control}
           render={({ field }) => (
-            <DropSelect
+            <Dropdown
               blue
               name='adminActive'
               id='captin-ctr-admin-active'
@@ -183,7 +183,7 @@ const CaptinControlForm = () => {
           name='agency'
           control={control}
           render={({ field }) => (
-            <DropSelect
+            <Dropdown
               blue
               name='agency'
               id='captin-ctr-agency'

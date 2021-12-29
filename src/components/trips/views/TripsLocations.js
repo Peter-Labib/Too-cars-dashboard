@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import DateSelect from '../../../shared/formElements/DateSelect'
-import DropSelectW from '../../../shared/formElements/DropSelectW/DropSelectW'
+import Dropdown from '../../../shared/formElements/Dropdown/Dropdown'
 import SearchBtn from '../../../shared/formElements/SearchBtn'
 // import Input from '../../shared/ui/Input'
 
@@ -12,8 +12,8 @@ const TripsLocations = () => {
       <p className='title-added'>{t('Trips locations')}</p>
 
       <form className='gap-4 grid grid-cols-2 lg:grid-cols-4'>
-        <DropSelectW placeholder={t('City')} />
-        <DropSelectW placeholder={t('Status')} />
+        <Dropdown placeholder={t('City')} />
+        <Dropdown placeholder={t('Status')} />
         <div className='min-w-[8rem]'>
           <DateSelect placeholder={t('from')} />
         </div>

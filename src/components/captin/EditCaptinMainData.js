@@ -5,8 +5,7 @@ import * as yup from 'yup'
 import { useTranslation } from 'react-i18next'
 import Input from '../../shared/formElements/Input'
 import Button from '../../shared/formElements/Button'
-import Dropdown from '../../shared/formElements/Dropdown'
-import DropSelectW from '../../shared/formElements/DropSelectW/DropSelectW'
+import Dropdown from '../../shared/formElements/Dropdown/Dropdown'
 import Radio from '../../shared/formElements/Radio'
 import avatar from '../../assets/img/avatar.png'
 import DateSelect from '../../shared/formElements/DateSelect'
@@ -202,7 +201,7 @@ const EditCaptinMainData = () => {
                 //   options={[1, 2, 3, 4]}
                 //   {...field}
                 // />
-                <DropSelectW
+                <Dropdown
                   error={errors.agency?.message}
                   name='agency'
                   id='edit-captin-agency'
@@ -224,7 +223,7 @@ const EditCaptinMainData = () => {
               name='commission'
               control={control}
               render={({ field }) => (
-                <DropSelectW
+                <Dropdown
                   blue
                   error={errors.commission?.message}
                   name='commission'
@@ -280,7 +279,7 @@ const EditCaptinMainData = () => {
               name='bonus'
               control={control}
               render={({ field }) => (
-                <DropSelectW
+                <Dropdown
                   blue
                   error={errors.bonus?.message}
                   name='bonus'
@@ -302,7 +301,7 @@ const EditCaptinMainData = () => {
               name='guarantee'
               control={control}
               render={({ field }) => (
-                <DropSelectW
+                <Dropdown
                   blue
                   error={errors.guarantee?.message}
                   name='guarantee'

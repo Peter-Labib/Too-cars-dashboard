@@ -39,6 +39,10 @@
     @apply col-span-4 md:col-span-2 lg:col-span-1;
   }
 
+  .table-container {
+    @apply overflow-x-auto mx-auto lg:overflow-x-hidden my-16 max-w-[93vw];
+  }
+
   .error-text {
     @apply text-red-600 text-xs;
   }

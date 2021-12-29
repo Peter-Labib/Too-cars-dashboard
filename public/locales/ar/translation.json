@@ -96,7 +96,7 @@
   "Production date": "تاريخ الصنع",
   "Car img": "صورة السيارة",
   "Arabic car number": "رقم السيارة بالعربى",
-  "English car number" : "رقم السيارة بالانجليزى",
+  "English car number": "رقم السيارة بالانجليزى",
   "Bill cycle": "الفترة المحاسبية",
   "Paid trips": "الرحلات المدفوعة",
   "Online hours": "عدد ساعات الاتاحة",
@@ -145,5 +145,13 @@
   "Maxmum trips": "العدد الأقصي للرحلات",
   "Cash": "السعر المقبوض",
   "Registered by": "تم التسجل من خلال",
-  "Control": "التحكم"
+  "Control": "التحكم",
+  "Add guarantee": "أضافة حد الأمان",
+  "Guarantee name": "أسم حد الأمان",
+  "Guarantee hours count": "عدد الساعات المطلوبة",
+  "Guarantee acceptance rate": "نسبة القبول المطلوبة",
+  "Price": "قيمة حد الامان",
+  "Drivers in guarantee": "عدد السائقين في حد الامان",
+  "Available": "متاح",
+  "Unemployed": "عاطل"
 }

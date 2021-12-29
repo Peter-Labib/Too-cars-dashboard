@@ -5,8 +5,7 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar } from '@fortawesome/free-solid-svg-icons'
-import Dropdown from '../../shared/formElements/Dropdown'
-import DropSelectW from '../../shared/formElements/DropSelectW/DropSelectW'
+import Dropdown from '../../shared/formElements/Dropdown/Dropdown'
 // import ImgPicker from '../../shared/ui/ImgPicker/ImgPicker'
 import IconedInput from '../../shared/formElements/IconedInput'
 import Button from '../../shared/formElements/Button'
@@ -37,10 +36,10 @@ const EditCpatinCar = () => {
       >
         <div className='grid gap-4 grid-cols-1 md:grid-cols-2 '>
           <div className='h-20'>
-            <DropSelectW blue name='Car-model' label={t('Car model')} />
+            <Dropdown blue name='Car-model' label={t('Car model')} />
           </div>
-          <DropSelectW blue name='Car-model' label={t('Car color')} />
-          <DropSelectW blue name='Car model' label={t('Production date')} />
+          <Dropdown blue name='Car-model' label={t('Car color')} />
+          <Dropdown blue name='Car model' label={t('Production date')} />
           {/* <ImgPicker label={strings.CarImg} small /> */}
           <ImgPicker label={t('Car img')} small />
           <IconedInput

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 import Header from '../shared/components/Header'
 import NavLinks from '../shared/components/Navigation/NavLinks'
@@ -9,6 +9,7 @@ import Backdrop from '../shared/formElements/Backdrop'
 import Home from './views/Home'
 import EditCaptin from './captin/views/EditCaptin'
 import CaptinControl from './captin/views/CaptinControl'
+import Guarantee from './captin/views/Guarantee'
 import TripsControl from './trips/views/TripsControl'
 import TripsLocations from './trips/views/TripsLocations'
 
@@ -32,7 +33,7 @@ const AppContainer = () => {
           <Backdrop onClick={sidebarToogle} show={openSidebar} />
         </React.Fragment>
       )}
-      <div className={`mx-auto flex lg:gap-x-4 w-full h-full px-4`}>
+      <div className={`mx-auto flex lg:gap-x-4 w-full h-full lg:px-4`}>
         <div
           className={`hidden lg:block overflow-hidden rounded-lg shadow-lg transition-all duration-300 ${
             openSidebar ? 'max-w-full min-w-[14rem]' : 'max-w-0 min-w-0'
@@ -51,24 +52,15 @@ const AppContainer = () => {
             // openSidebar ? '  max-w-min' : 'max-w-max w-3/4'
           }`}
         >
-          <div className='max-w-screen-xl mx-auto'>
-            <Switch>
-              <Route path='/captin-edit'>
-                <EditCaptin />
-              </Route>
-              <Route path='/captin-control'>
-                <CaptinControl />
-              </Route>
-              <Route path='/trips-locations'>
-                <TripsLocations />
-              </Route>
-              <Route path='/trips-control'>
-                <TripsControl />
-              </Route>
-              <Route path='/'>
-                <Home />
-              </Route>
-            </Switch>
+          <div className='max-w-screen-xl mx-auto mt-2'>
+            <Routes>
+              <Route path='/captin-edit' element={<EditCaptin />} />
+              <Route path='/captin-control' element={<CaptinControl />} />
+              <Route path='/guarantee' element={<Guarantee />} />
+              <Route path='/trips-locations' element={<TripsLocations />} />
+              <Route path='/trips-control' element={<TripsControl />} />
+              <Route path='/' element={<Home />} />
+            </Routes>
           </div>
         </div>
       </div>

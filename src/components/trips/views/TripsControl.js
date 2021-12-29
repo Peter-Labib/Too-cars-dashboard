@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 // import DropDownSelect from '../../shared/ui/DropDownSelect'
 import Table from '../../../shared/components/Table'
 import Input from '../../../shared/formElements/Input'
-import DropSelectW from '../../../shared/formElements/DropSelectW/DropSelectW'
+import Dropdown from '../../../shared/formElements/Dropdown/Dropdown'
 import DetailCard from '../../../shared/components/DetailCard'
 import SearchBtn from '../../../shared/formElements/SearchBtn'
 import ResetBtn from '../../../shared/formElements/ResetBtn'
@@ -30,17 +30,17 @@ const TripsControl = () => {
         <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-2 mb-4'>
           {/* <DropDownSelect placeholder={strings.City} /> */}
 
-          <DropSelectW placeholder={t('City')} />
-          <DropSelectW placeholder={t('Agency')} />
-          <DropSelectW placeholder={t('Car type')} />
-          <DropSelectW placeholder={t('Car model')} />
-          <DropSelectW placeholder={t('Status')} />
-          <DropSelectW placeholder={t('Reason of cancellation')} />
+          <Dropdown placeholder={t('City')} />
+          <Dropdown placeholder={t('Agency')} />
+          <Dropdown placeholder={t('Car type')} />
+          <Dropdown placeholder={t('Car model')} />
+          <Dropdown placeholder={t('Status')} />
+          <Dropdown placeholder={t('Reason of cancellation')} />
           <Input placeholder={t('Address from')} type='text' />
           <Input placeholder={t('Address to')} type='text' />
-          <DropSelectW placeholder={t('Client')} />
-          <DropSelectW placeholder={t('Captin')} />
-          <DropSelectW placeholder={t('Promo')} />
+          <Dropdown placeholder={t('Client')} />
+          <Dropdown placeholder={t('Captin')} />
+          <Dropdown placeholder={t('Promo')} />
           <Input placeholder={t('Max distance')} />
         </div>
         <div className='flex gap-x-4 items-center'>

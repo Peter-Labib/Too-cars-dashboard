@@ -44,15 +44,6 @@ const DropdownNavItem = ({ linkData }) => {
         } overflow-hidden`}
       >
         {children.map((child) => (
-          // <div
-          //   key={uuidv4()}
-          //   className='flex items-center px-12 py-2 hover:bg-main hover:text-white hover:shadow-inner cursor-pointer'
-          // >
-          //   <div>
-          //     <FontAwesomeIcon icon={child.icon} />
-          //   </div>
-          //   <div className='px-4'>{child.name}</div>
-          // </div>
           <NavItem key={uuidv4()} linkData={child} subMenu />
         ))}
       </div>

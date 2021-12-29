@@ -1,6 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
-import './DropSelectW.scss'
+import './Dropdown.scss'
 
 // const customStyles = {
 //   control: (provided) => ({
@@ -41,7 +41,7 @@ import './DropSelectW.scss'
 //   }),
 // }
 
-const DropSelectW = React.forwardRef(
+const Dropdown = React.forwardRef(
   (
     {
       placeholder = '',
@@ -88,4 +88,4 @@ const DropSelectW = React.forwardRef(
   }
 )
 
-export default DropSelectW
+export default Dropdown

@@ -145,5 +145,13 @@
   "Maxmum trips": "Maxmum trips",
   "Cash": "Cash",
   "Registered by": "Registered by",
-  "Control": "Control"
+  "Control": "Control",
+  "Add guarantee": "Add guarantee",
+  "Guarantee name": "Guarantee Name",
+  "Guarantee hours count": "Guarantee hours count",
+  "Guarantee acceptance rate": "Guarantee acceptance rate",
+  "Price": "Price",
+  "Drivers in guarantee": "Drivers in guarantee",
+  "Available": "available",
+  "Unemployed": "unemployed"
 }
